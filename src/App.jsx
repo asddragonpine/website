@@ -303,7 +303,7 @@ const App = () => {
                 <img
                   src={`https://raw.githubusercontent.com/asddragonpine/website/main/${img}`}
                   alt={`Logo ${index + 1}`}
-                  style={{ width: "100%", height: "auto", objectFit: "contain" }}
+                  style={{ width: "100%", minHeight: "100vh", objectFit: "contain" }}
                 />
               </Col>
             ))}
@@ -341,6 +341,11 @@ const App = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 2, delay: 2 }}
+              style={{
+                position: "relative",
+                zIndex: 1,
+                marginTop: "-30px",
+              }}
               >
               <Card
                 title={<span style={{ color: "white" }}>About Us</span>}
@@ -362,7 +367,7 @@ const App = () => {
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 2, delay: 2 }}
+          transition={{ duration: 2, delay: 1 }}
         >
           <div style={{ textAlign: "center", marginTop: "20px" }}>
             <p>Vuoi unirti a noi?</p>
