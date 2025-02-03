@@ -28,7 +28,7 @@ const App = () => {
       <Content style={{ padding: "24px", margin: "0 auto", width: "100%" }}>
       <Row gutter={16} justify="center">
         <Col style={{maxHeight: "400px", display: "flex", justifyContent: "center", alignItems: "center" }}>
-          <img src="https://raw.githubusercontent.com/asddragonpine/website/main/dragon asd.png" alt="Logo 0" style={{ maxWidth: "100%", maxHeight: "100%", objectFit: "contain", padding: "30px" }} />
+          <img src="https://raw.githubusercontent.com/asddragonpine/website/main/dragon-asd.png" alt="Logo 0" style={{ maxWidth: "100%", maxHeight: "100%", objectFit: "contain", padding: "30px" }} />
         </Col>
        </Row>
 
@@ -41,16 +41,16 @@ const App = () => {
             }}
           />   
           <Row gutter={16} justify="center">
-          <Col xs={1} sm={2} md={3} lg={4} xl={6}>
+          <Col xs={3} sm={4} md={4} lg={5} xl={5}>
             <img src="https://raw.githubusercontent.com/asddragonpine/website/main/dragon-junior.jpeg" alt="Logo 1" style={{ width: "100%" }} />
           </Col>
-          <Col xs={1} sm={2} md={3} lg={4} xl={6}>
+          <Col xs={3} sm={4} md={4} lg={5} xl={5}>
             <img src="https://raw.githubusercontent.com/asddragonpine/website/main/dragon-shark.png" alt="Logo 2" style={{ width: "100%" }} />
           </Col>
-          <Col xs={1} sm={2} md={3} lg={4} xl={6}>
+          <Col xs={3} sm={4} md={4} lg={5} xl={5}>
             <img src="https://raw.githubusercontent.com/asddragonpine/website/main/dragon-pine.png" alt="Logo 3" style={{ width: "100%" }} />
           </Col>
-          <Col xs={1} sm={2} md={3} lg={4} xl={6}>
+          <Col xs={3} sm={4} md={4} lg={5} xl={5}>
             <img src="https://raw.githubusercontent.com/asddragonpine/website/main/dragon-flames.png" alt="Logo 4" style={{ width: "100%" }} />
           </Col>
         </Row>
