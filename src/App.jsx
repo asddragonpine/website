@@ -45,7 +45,7 @@ const App = () => {
             <img src="/website/dragon-junior.jpeg" alt="Logo 1" style={{ width: "100%" }} />
           </Col>
           <Col xs={6} sm={4} md={3} lg={2} xl={1}>
-            <img src="/website/dragon-shark.png" alt="Logo 2" style={{ width: "100%" }} />
+            <img src="https://raw.githubusercontent.com/asddragonpine/website/main/dragon-shark.png" alt="Logo 2" style={{ width: "100%" }} />
           </Col>
           <Col xs={6} sm={4} md={3} lg={2} xl={1}>
             <img src="/website/dragon-pine.png" alt="Logo 3" style={{ width: "100%" }} />
