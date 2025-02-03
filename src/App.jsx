@@ -42,23 +42,23 @@ const App = () => {
           />   
           <Row gutter={16} justify="center">
           <Col xs={6} sm={4} md={3} lg={2} xl={1}>
-            <img src="/dragon-website/dragon-junior.jpeg" alt="Logo 1" style={{ width: "100%" }} />
+            <img src="/website/dragon-junior.jpeg" alt="Logo 1" style={{ width: "100%" }} />
           </Col>
           <Col xs={6} sm={4} md={3} lg={2} xl={1}>
-            <img src="/dragon-website/dragon-shark.png" alt="Logo 2" style={{ width: "100%" }} />
+            <img src="/website/dragon-shark.png" alt="Logo 2" style={{ width: "100%" }} />
           </Col>
           <Col xs={6} sm={4} md={3} lg={2} xl={1}>
-            <img src="/dragon-website/dragon-pine.png" alt="Logo 3" style={{ width: "100%" }} />
+            <img src="/website/dragon-pine.png" alt="Logo 3" style={{ width: "100%" }} />
           </Col>
           <Col xs={6} sm={4} md={3} lg={2} xl={1}>
-            <img src="/dragon-website/dragon-flames.png" alt="Logo 4" style={{ width: "100%" }} />
+            <img src="/website/dragon-flames.png" alt="Logo 4" style={{ width: "100%" }} />
           </Col>
         </Row>
         <Typography.Title level={3}  style={{ textAlign: "center", marginTop: "10px"}}>Benvenuto</Typography.Title>
 
          {/* Sfondo sotto ai loghi */}
          <Image 
-         src="/dragon-website/sfondo-squadra.jpeg"
+         src="/website/sfondo-squadra.jpeg"
          />
          
   
