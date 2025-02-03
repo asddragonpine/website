@@ -303,7 +303,7 @@ const App = () => {
                 <img
                   src={`https://raw.githubusercontent.com/asddragonpine/website/main/${img}`}
                   alt={`Logo ${index + 1}`}
-                  style={{ width: "100%", minHeight: "100vh", objectFit: "contain" }}
+                  style={{ width: "100%", Height: "auto", objectFit: "contain" }}
                 />
               </Col>
             ))}
@@ -328,7 +328,7 @@ const App = () => {
             backgroundImage: "url('https://raw.githubusercontent.com/asddragonpine/website/main/sfondo-squadra.jpeg')",
             backgroundSize: "cover",
             backgroundPosition: "center",
-            height: "300px",
+            minHeight: "100vh",
             width: "100%",
             margin: "20px 0",
           }}
