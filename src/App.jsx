@@ -41,16 +41,16 @@ const App = () => {
             }}
           />   
           <Row gutter={16} justify="center">
-          <Col xs={3} sm={4} md={4} lg={5} xl={5}>
+          <Col xs={4} sm={4} md={4} lg={4} xl={4}>
             <img src="https://raw.githubusercontent.com/asddragonpine/website/main/dragon-junior.jpeg" alt="Logo 1" style={{ width: "100%" }} />
           </Col>
-          <Col xs={3} sm={4} md={4} lg={5} xl={5}>
+          <Col xs={4} sm={4} md={4} lg={4} xl={4}>
             <img src="https://raw.githubusercontent.com/asddragonpine/website/main/dragon-shark.png" alt="Logo 2" style={{ width: "100%" }} />
           </Col>
-          <Col xs={3} sm={4} md={4} lg={5} xl={5}>
+          <Col xs={4} sm={4} md={4} lg={4} xl={4}>
             <img src="https://raw.githubusercontent.com/asddragonpine/website/main/dragon-pine.png" alt="Logo 3" style={{ width: "100%" }} />
           </Col>
-          <Col xs={3} sm={4} md={4} lg={5} xl={5}>
+          <Col xs={4} sm={4} md={4} lg={4} xl={4}>
             <img src="https://raw.githubusercontent.com/asddragonpine/website/main/dragon-flames.png" alt="Logo 4" style={{ width: "100%" }} />
           </Col>
         </Row>
@@ -59,6 +59,7 @@ const App = () => {
          {/* Sfondo sotto ai loghi */}
          <Image 
          src="https://raw.githubusercontent.com/asddragonpine/website/main/sfondo-squadra.jpeg"
+         style={{ userSelect: 'none' }}
          />
          
   
