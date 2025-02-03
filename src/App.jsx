@@ -28,7 +28,7 @@ const App = () => {
       <Content style={{ padding: "24px", margin: "0 auto", width: "100%" }}>
       <Row gutter={16} justify="center">
         <Col style={{maxHeight: "400px", display: "flex", justifyContent: "center", alignItems: "center" }}>
-          <img src="/dragon-website/dragon asd.png" alt="Logo 0" style={{ maxWidth: "100%", maxHeight: "100%", objectFit: "contain", padding: "30px" }} />
+          <img src="https://raw.githubusercontent.com/asddragonpine/website/main/dragon asd.png" alt="Logo 0" style={{ maxWidth: "100%", maxHeight: "100%", objectFit: "contain", padding: "30px" }} />
         </Col>
        </Row>
 
@@ -41,24 +41,24 @@ const App = () => {
             }}
           />   
           <Row gutter={16} justify="center">
-          <Col xs={6} sm={4} md={3} lg={2} xl={1}>
-            <img src="/website/dragon-junior.jpeg" alt="Logo 1" style={{ width: "100%" }} />
+          <Col xs={1} sm={2} md={3} lg={4} xl={6}>
+            <img src="https://raw.githubusercontent.com/asddragonpine/website/main/dragon-junior.jpeg" alt="Logo 1" style={{ width: "100%" }} />
           </Col>
-          <Col xs={6} sm={4} md={3} lg={2} xl={1}>
+          <Col xs={1} sm={2} md={3} lg={4} xl={6}>
             <img src="https://raw.githubusercontent.com/asddragonpine/website/main/dragon-shark.png" alt="Logo 2" style={{ width: "100%" }} />
           </Col>
-          <Col xs={6} sm={4} md={3} lg={2} xl={1}>
-            <img src="/website/dragon-pine.png" alt="Logo 3" style={{ width: "100%" }} />
+          <Col xs={1} sm={2} md={3} lg={4} xl={6}>
+            <img src="https://raw.githubusercontent.com/asddragonpine/website/main/dragon-pine.png" alt="Logo 3" style={{ width: "100%" }} />
           </Col>
-          <Col xs={6} sm={4} md={3} lg={2} xl={1}>
-            <img src="/website/dragon-flames.png" alt="Logo 4" style={{ width: "100%" }} />
+          <Col xs={1} sm={2} md={3} lg={4} xl={6}>
+            <img src="https://raw.githubusercontent.com/asddragonpine/website/main/dragon-flames.png" alt="Logo 4" style={{ width: "100%" }} />
           </Col>
         </Row>
         <Typography.Title level={3}  style={{ textAlign: "center", marginTop: "10px"}}>Benvenuto</Typography.Title>
 
          {/* Sfondo sotto ai loghi */}
          <Image 
-         src="/website/sfondo-squadra.jpeg"
+         src="https://raw.githubusercontent.com/asddragonpine/website/main/sfondo-squadra.jpeg"
          />
          
   
