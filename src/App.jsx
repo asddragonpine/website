@@ -41,16 +41,16 @@ const App = () => {
             }}
           />   
           <Row gutter={16} justify="center">
-          <Col xs={4} sm={4} md={4} lg={4} xl={4}>
+          <Col xs={3} sm={3} md={4} lg={4} xl={4}>
             <img src="https://raw.githubusercontent.com/asddragonpine/website/main/dragon-junior.jpeg" alt="Logo 1" style={{ width: "100%" }} />
           </Col>
-          <Col xs={4} sm={4} md={4} lg={4} xl={4}>
+          <Col xs={3} sm={3} md={4} lg={4} xl={4}>
             <img src="https://raw.githubusercontent.com/asddragonpine/website/main/dragon-shark.png" alt="Logo 2" style={{ width: "100%" }} />
           </Col>
-          <Col xs={4} sm={4} md={4} lg={4} xl={4}>
+          <Col xs={3} sm={3} md={4} lg={4} xl={4}>
             <img src="https://raw.githubusercontent.com/asddragonpine/website/main/dragon-pine.png" alt="Logo 3" style={{ width: "100%" }} />
           </Col>
-          <Col xs={4} sm={4} md={4} lg={4} xl={4}>
+          <Col xs={3} sm={3} md={4} lg={4} xl={4}>
             <img src="https://raw.githubusercontent.com/asddragonpine/website/main/dragon-flames.png" alt="Logo 4" style={{ width: "100%" }} />
           </Col>
         </Row>
@@ -68,7 +68,7 @@ const App = () => {
 
               {/* Sezione About Us */}
           <Row justify="left">
-            <Col xs={18} sm={12} md={8} lg={5} xl={3}>
+            <Col xs={18} sm={12} md={4} lg={2} xl={2}>
             <div
       style={{
         position: "relative", // Posiziona la card relativamente al suo contenitore
