@@ -41,15 +41,31 @@
   left: 10px;
 }
 
+/* Stile Mobile */
 @media (max-width: 768px) {
   .title {
     font-size: 20px; /* Riduce la dimensione del titolo su schermi più piccoli */
   }
   .hero {
     background-size: cover; /* Cambia la modalità di adattamento dell'immagine su schermi più piccoli */
-    height: 60vh; /* Riduce l'altezza dell'immagine sui dispositivi mobili */
+    height: 50vh; /* Riduce l'altezza dell'immagine sui dispositivi mobili */
   }
   .container {
-    height: 60vh; /* Riduce l'altezza del contenitore insieme all'immagine */
+    height: 50vh; /* Riduce l'altezza del contenitore insieme all'immagine */
+  }
+}
+
+/* Stile Tablet */
+@media (max-width: 1024px) {
+  .container {
+    height: 70vh;
+    padding: 30px;
+  }
+  .title {
+    font-size: 26px;
+  }
+  .hero {
+    background-size: cover;
+    height: 70vh;
   }
 }

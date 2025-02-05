@@ -10,6 +10,7 @@ import { MantineProvider } from '@mantine/core';
 import { Container, Overlay, Text, Title, Paper, Divider } from '@mantine/core';
 import classes from './HeroContentLeft.module.css';
 import { InstagramOutlined } from '@ant-design/icons';
+import { useMediaQuery } from "react-responsive";
 
 
 import { Layout, Menu, Typography, Row, Col, Card, Button, Spin, Space } from "antd";
@@ -20,6 +21,11 @@ const { Content } = Layout;
 const Home = () => {
   const [loading, setLoading] = useState(true);
 
+  const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
+  const isTablet = useMediaQuery({ query: "(max-width: 1024px)" });
+
+  const heroHeight = isMobile ? "50vh" : isTablet ? "70vh" : "100vh";
+  const titleFontSize = isMobile ? "20px" : isTablet ? "26px" : "50px";
 
   const instagramLinks = [
     { link: "https://www.instagram.com/asddragonpine/", label: "Dragon Pine" }, 
@@ -46,6 +52,8 @@ const Home = () => {
       });
     });
 
+   
+
     Promise.all(loadImages).then(() => setLoading(false));
   }, []);
 
@@ -68,7 +76,7 @@ const Home = () => {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 1.2 }}
     >
-
+{/* 
 <MantineProvider >
 
 <div className={classes.hero}>
@@ -81,6 +89,62 @@ const Home = () => {
 </Container>
 </div>
 </MantineProvider>
+
+*/}
+
+<MantineProvider >
+      <div
+        style={{
+          position: "relative",
+          backgroundImage: "url(https://raw.githubusercontent.com/asddragonpine/website/main/sfondo-squadra.jpeg)",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+          height: heroHeight,
+        }}
+      >
+        <div
+          style={{
+            content: "''",
+            position: "absolute",
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
+            background: "linear-gradient(180deg, rgba(0, 0, 0, 0) 70%, rgba(0, 0, 0, 0.924) 100%)",
+            zIndex: 1,
+          }}
+        />
+        <Container
+          style={{
+            position: "absolute",
+            zIndex: 2,
+            padding: "20px",
+            display: "flex",
+            justifyContent: "flex-end",
+            alignItems: "center",
+            height: "100%",
+            width: "80%",
+          }}
+        >
+          <Title
+            style={{
+              color: "white",
+              fontSize: titleFontSize,
+              fontWeight: 900,
+              lineHeight: 1.1,
+              textAlign: "left",
+              position: "absolute",
+              bottom: "20px",
+              left: "10px",
+            }}
+          >
+            THE OFFICIAL HOME OF <br /> ASD DRAGON PINÉ
+          </Title>
+        </Container>
+      </div>
+   
+      </MantineProvider>
     </motion.div>
         
 
