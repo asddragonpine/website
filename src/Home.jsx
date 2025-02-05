@@ -176,7 +176,7 @@ const Home = () => {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 2, delay: 2 }}
         >
-          <Typography.Title level={2} style={{ textAlign: "center", marginTop: "10px", height:"100px", fontFamily: "fantasy", fontSize:"40px"}}>
+          <Typography.Title level={2} style={{ textAlign: "center", marginTop: "20px", height:"100px", fontFamily: "fantasy", fontSize:"40px"}}>
             Benvenuto
           </Typography.Title>
         </motion.div>
@@ -211,7 +211,7 @@ const Home = () => {
     
 
         <Row justify="start">
-          <Col xs={{ span: 20 }} sm={{ span: 18 }} md={{ span: 16 }} lg={{ span: 14 }} xl={{ span: 12 }}>
+          <Col >
             <motion.div
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
