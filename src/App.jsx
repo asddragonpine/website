@@ -198,9 +198,16 @@ const App = () => {
 };
 
 export default App;
-*/
+
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+//import Home from "./Home"; // Il tuo componente per la Home
+import Event from "./Event"; // Pagina Eventi
+//import Contacts from "./Contacts"; // Pagina Contatti
+import Navbar from "./Navbar"; // Se il Menu è separato
+
 import { Layout, Menu, Typography, Row, Col, Divider, Card, Button, Spin } from "antd";
 import "./index.css";
 
@@ -258,10 +265,16 @@ const App = () => {
         }}
       >
         <Menu theme="dark" mode="horizontal" defaultSelectedKeys={["home"]}>
-          <Menu.Item key="home">HOME</Menu.Item>
-          <Menu.Item key="eventi">EVENTI</Menu.Item>
-          <Menu.Item key="contatti">CONTATTI</Menu.Item>
-        </Menu>
+  <Menu.Item key="home">
+    <Link to="/">HOME</Link>
+  </Menu.Item>
+  <Menu.Item key="eventi">
+    <Link to="/eventi">EVENTI</Link>
+  </Menu.Item>
+  <Menu.Item key="contatti">
+    <Link to="/contatti">CONTATTI</Link>
+  </Menu.Item>
+</Menu>
       </Header>
 
       <Content style={{ padding: "24px", margin: "0 auto", width: "100%" }}>
@@ -286,7 +299,7 @@ const App = () => {
           animate={{ opacity: 1 }}
           transition={{ duration: 2, delay: 2 }}
         >
-          <Typography.Title level={2} style={{ textAlign: "center" }}>
+          <Typography.Title level={3} style={{ textAlign: "center", fontFamily: "fantasy"}}>
             THE OFFICIAL HOME OF <br /> ASD DRAGON PINÉ
           </Typography.Title>
           <Divider style={{ borderTop: "4px solid #f2460c" }} />
@@ -321,18 +334,28 @@ const App = () => {
         </motion.div>
 
         <motion.div
-          initial={{ opacity: 0, x: -50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 2, delay: 2 }}
-          style={{
-            backgroundImage: "url('https://raw.githubusercontent.com/asddragonpine/website/main/sfondo-squadra.jpeg')",
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            minHeight: "100vh",
-            width: "100%",
-            margin: "20px 0",
-          }}
-        ></motion.div>
+  initial={{ opacity: 0, x: -50 }}
+  animate={{ opacity: 1, x: 0 }}
+  transition={{ duration: 2, delay: 1 }}
+  style={{
+    width: "100%",
+    //minHeight: "100vh",
+    padding: 0, // Evita padding non necessario
+    margin: 0, // Rimuove margini predefiniti    overflow: "hidden", // Evita overflow indesiderato su mobile
+  }}
+>
+  <img
+    src="https://raw.githubusercontent.com/asddragonpine/website/main/sfondo-squadra.jpeg"
+    alt="Sfondo squadra"
+    style={{
+      width: "100%",
+      height: "100%",
+      objectFit: "cover", // Mantiene l'immagine proporzionata senza distorsioni
+      display: "block", // Evita spazi extra sotto l'immagine
+
+    }}
+  />
+</motion.div>
 
         <Row justify="start">
           <Col xs={{ span: 20 }} sm={{ span: 18 }} md={{ span: 10 }} lg={{ span: 8 }} xl={{ span: 6 }}>
@@ -340,7 +363,7 @@ const App = () => {
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 2, delay: 2 }}
+              transition={{ duration: 2, delay: 1 }}
               style={{
                 position: "relative",
                 zIndex: 1,
@@ -391,6 +414,87 @@ const App = () => {
 
       <Footer style={{ textAlign: "center" }}>© 2025 ASD Dragon Pine</Footer>
     </Layout>
+  );
+};
+
+export default App;
+
+
+
+import React, { useState, useEffect } from "react";
+import { motion } from "framer-motion";
+import { Routes, Route } from "react-router-dom";
+import { Layout, Spin } from "antd";
+import Navbar from "./Navbar";
+import Home from "./Home";
+import Event from "./Event";
+//import Contacts from "./pages/Contacts";
+
+const { Header, Content, Footer } = Layout;
+
+const App = () => {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => setLoading(false), 1000);
+  }, []);
+
+  return loading ? (
+    <div
+      style={{
+        height: "100vh",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        backgroundColor: "#ffffff",
+      }}
+    >
+      <Spin size="large" />
+    </div>
+  ) : (
+      <Layout style={{ minHeight: "100vh" }}>
+        <Navbar />
+        <Content style={{ padding: "24px" }}>
+          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1 }}>
+            <Routes>
+                <Route path="/website" element={<Home />} />
+
+              <Route path="/" element={<Home />} />
+              <Route path="/eventi" element={<Event />} />
+            </Routes>
+          </motion.div>
+        </Content>
+        <Footer style={{ textAlign: "center" }}>© 2025 ASD Dragon Pine</Footer>
+      </Layout>
+  );
+};
+
+export default App;
+*/
+
+import React from "react";
+import { Routes, Route } from "react-router-dom";
+import Home from "./Home";
+import Event from "./Event";
+import Navbar from "./Navbar";
+import Footerbar from "./Footerbar";
+import CookieConsent from './CookieConsent'; // Assicurati che il percorso sia corretto
+
+
+
+
+const App = () => {
+  return (
+    <>
+      <Navbar />
+      <CookieConsent />
+
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/event" element={<Event />} />
+      </Routes>
+      <Footerbar />
+    </>
   );
 };
 

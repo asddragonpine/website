@@ -1,0 +1,55 @@
+.hero {
+  position: relative;
+  background-image: url(https://raw.githubusercontent.com/asddragonpine/website/main/sfondo-squadra.jpeg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh; /* Altezza dell'immagine pari al 100% della finestra */
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 70%, rgba(0, 0, 0, 0.924) 100%);
+  z-index: 1; /* Sovrascrive l'immagine ma non il contenuto */
+}
+
+.container {
+  position: absolute;
+  z-index: 2; /* Mantiene il contenuto sopra il gradiente */
+  padding: 20px;
+  display: flex;
+  justify-content: flex-end; /* Allinea il contenuto verso il basso */
+  align-items: center; /* Centra il contenuto orizzontalmente */
+  height: 100%; /* Assicura che il contenitore occupi tutta l'altezza disponibile */
+  width: 80%;
+}
+
+.title {
+  color: white;
+  font-size: 50px;
+  font-weight: 900;
+  line-height: 1.1;
+  text-align: left;
+  position: absolute;
+  bottom: 20px; /* Posiziona il titolo al fondo dell'immagine */
+  width: 100%;
+  left: 10px;
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 20px; /* Riduce la dimensione del titolo su schermi più piccoli */
+  }
+  .hero {
+    background-size: cover; /* Cambia la modalità di adattamento dell'immagine su schermi più piccoli */
+    height: 60vh; /* Riduce l'altezza dell'immagine sui dispositivi mobili */
+  }
+  .container {
+    height: 60vh; /* Riduce l'altezza del contenitore insieme all'immagine */
+  }
+}
