@@ -10,7 +10,7 @@ import App from './App'
 import Home from './Home.jsx'
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-<BrowserRouter basename="/website">
+<BrowserRouter>
       <App />
     </BrowserRouter>
 
