@@ -24,7 +24,7 @@ const Home = () => {
   const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
   const isTablet = useMediaQuery({ query: "(max-width: 1024px)" });
 
-  const heroHeight = isMobile ? "50vh" : isTablet ? "70vh" : "100vh";
+  const heroHeight = isMobile ? "40vh" : isTablet ? "70vh" : "100vh";
   const titleFontSize = isMobile ? "20px" : isTablet ? "26px" : "50px";
 
   const instagramLinks = [
@@ -111,7 +111,7 @@ const Home = () => {
             left: 0,
             right: 0,
             bottom: 0,
-            background: "linear-gradient(180deg, rgba(0, 0, 0, 0) 70%, rgba(0, 0, 0, 0.924) 100%)",
+            background: "linear-gradient(180deg, rgba(0, 0, 0, 0) 70%, rgba(0, 0, 0, 1) 100%)",
             zIndex: 1,
           }}
         />
