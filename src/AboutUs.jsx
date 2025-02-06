@@ -31,7 +31,7 @@ const AboutUs = () => {
           loop
         >
           <source
-            src={isMobile ? '/video-dragon-verticale.mp4' : '/video-dragon-orizzontale.mp4'}
+            src={isMobile ? 'https://raw.githubusercontent.com/asddragonpine/website/main/video-dragon-verticale.mp4' : 'https://raw.githubusercontent.com/asddragonpine/website/main/video-dragon-orizzontale.mp4'}
             type='video/mp4'
           />
           Il tuo browser non supporta il video.
