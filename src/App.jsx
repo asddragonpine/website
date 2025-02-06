@@ -479,6 +479,7 @@ import Event from "./Event";
 import Navbar from "./Navbar";
 import Footerbar from "./Footerbar";
 import CookieConsent from './CookieConsent'; // Assicurati che il percorso sia corretto
+import AboutUs from "./AboutUs";
 
 
 
@@ -492,6 +493,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/event" element={<Event />} />
+        <Route path="/aboutus" element={<AboutUs />} />
       </Routes>
       <Footerbar />
     </>

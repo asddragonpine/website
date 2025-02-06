@@ -6,7 +6,6 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Event from "./Event"; // Pagina Eventi
 //import Contacts from "./Contacts"; // Pagina Contatti
 import Navbar from "./Navbar"; // Se il Menu è separato
-import { MantineProvider } from '@mantine/core';
 import { Container, Overlay, Text, Title, Paper, Divider } from '@mantine/core';
 import classes from './HeroContentLeft.module.css';
 import { InstagramOutlined } from '@ant-design/icons';
@@ -92,7 +91,6 @@ const Home = () => {
 
 */}
 
-<MantineProvider >
       <div
         style={{
           position: "relative",
@@ -144,7 +142,6 @@ const Home = () => {
         </Container>
       </div>
    
-      </MantineProvider>
     </motion.div>
         
 
@@ -166,9 +163,7 @@ const Home = () => {
           </Row>
         </motion.div>
 
-        <MantineProvider >
         <Divider style={{ borderTop: "3px solid #f2460c" , marginBottom:"10px"}} />
-        </MantineProvider >
 
         {/*
         <motion.div
