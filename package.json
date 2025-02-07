@@ -10,7 +10,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "generate:sitemap": "node generate-sitemap.js",
-    "predeploy": "npm run build && npm run generate:sitemap && cp ./sitemap.xml ./dist/sitemap.xml && cp ./robots.txt ./dist/robots.txt",
+    "predeploy": "npm run build && npm run generate:sitemap && cp ./sitemap.xml ./dist/sitemap.xml && cp ./robots.txt ./dist/robots.txt && cp ./google155dc3cee96db519.html ./dist/google155dc3cee96db519.html",
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
