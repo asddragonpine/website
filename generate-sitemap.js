@@ -1,5 +1,5 @@
-const { SitemapStream, streamToPromise } = require('sitemap');
-const fs = require('fs');
+import { SitemapStream, streamToPromise } from 'sitemap';
+import fs from 'fs';
 
 (async () => {
   const hostname = 'https://asddragonpine.com'; // Aggiorna con il tuo dominio
@@ -12,7 +12,7 @@ const fs = require('fs');
 
   try {
     const data = await streamToPromise(sitemap);
-    fs.writeFileSync('./public/sitemap.xml', data.toString());
+    fs.writeFileSync('./sitemap.xml', data.toString());
     console.log('Sitemap generata correttamente!');
   } catch (error) {
     console.error('Errore nella generazione della sitemap:', error);
