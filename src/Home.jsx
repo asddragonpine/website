@@ -10,6 +10,7 @@ import { Container, Overlay, Text, Title, Paper, Divider } from '@mantine/core';
 import classes from './HeroContentLeft.module.css';
 import { InstagramOutlined } from '@ant-design/icons';
 import { useMediaQuery } from "react-responsive";
+import { Helmet } from "react-helmet";
 
 
 import { Layout, Menu, Typography, Row, Col, Card, Button, Spin, Space } from "antd";
@@ -75,6 +76,44 @@ const Home = () => {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 1.2 }}
     >
+        
+        <Helmet>
+        <title>Dragon Boat Piné - Sport e Gare a Baselga di Piné, Trento</title>
+        <meta
+          name="description"
+          content="Scopri Dragon Boat Piné: eventi sportivi, gare di dragon boat e attività sportive a Baselga di Piné, Trento. Vivi la bellezza del Trentino attraverso sport e natura."
+        />
+        <meta
+          name="keywords"
+          content="Dragon Boat Piné, Baselga di Piné, Trento, Trentino, sport, gare dragon boat, eventi sportivi, sport in Trentino, lago di Serraia"
+        />
+        <meta name="author" content="Dragon Boat Piné Team" />
+        
+        {/* Meta Tag Open Graph */}
+        <meta property="og:title" content="Dragon Boat Piné - Sport e Gare a Baselga di Piné" />
+        <meta 
+          property="og:description" 
+          content="Partecipa alle emozionanti gare di dragon boat a Baselga di Piné, Trento. Scopri eventi e attività sportive nel cuore del Trentino." 
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://asddragonpine.com" />
+        <meta property="og:image" content="https://raw.githubusercontent.com/asddragonpine/website/main/dragon-asd.png"/>
+        <script type="application/ld+json">
+          {`
+            {
+              "@context": "https://schema.org",
+              "@type": "SportsEvent",
+              "name": "Dragon Boat Baselga di Piné",
+              "location": {
+                "@type": "Place",
+                "name": "Lago di Serraia",
+                "address": "Baselga di Piné, Trento, Italia"
+              },
+              "eventStatus": "https://schema.org/EventScheduled"
+            }
+          `}
+        </script>
+      </Helmet>
 {/* 
 <MantineProvider >
 

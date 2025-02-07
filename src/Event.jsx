@@ -65,17 +65,25 @@ const Event = () => {
       },
   ];
 
-
+  const eventiData = [
+    {
+        title: "Domeniche aperte a tutti",
+        description: "Prova a pagaiare con noi ed immergiti nella natura.",
+        date: "13/07/2025 - 14/07/2025",
+        location: "Balsega di Piné",
+        image: "https://raw.githubusercontent.com/asddragonpine/website/main/dragon-festival.png", // Aggiungi immagine appropriata
+      },
+  ];
   return (
-    <div style={{ padding: "24px", alignContent:"center"}}>
-       <Typography.Title level={3}>Eventi</Typography.Title>
-      <p>Prossimi Eventi del Team.</p>
+    <div style={{ padding: "24px", alignContent:"center", marginTop:"50px"}}>
+       <Typography.Title level={3}>Prossimi eventi</Typography.Title>
+     
 
       {/* Sezione Feste */}
       <Typography.Title
         level={4}
         style={{
-          backgroundColor: "#f2460c", // Sfondo arancio
+          backgroundColor: "#47b4d0", // Sfondo azzurro
           color: "white", // Colore del testo bianco
           padding: "15px", // Padding per dare spazio al testo
           borderRadius: "5px", // Rende gli angoli arrotondati
@@ -143,6 +151,46 @@ const Event = () => {
               <div style={{ display: "flex", alignItems: "center", marginTop: "10px" }}>
                 <EnvironmentOutlined style={{ marginRight: "5px" }} />
                 <span>{gara.location}</span>
+              </div>
+            </Card>
+          </Col>
+        ))}
+      </Row>
+
+      <Typography.Title
+        level={4}
+        style={{
+          backgroundColor: "#67b538", // Sfondo arancio
+          color: "white", // Colore del testo bianco
+          padding: "15px", // Padding per dare spazio al testo
+          borderRadius: "5px", // Rende gli angoli arrotondati
+          marginTop: "15px",
+        }}
+      >
+        Eventi
+      </Typography.Title>
+      <Row gutter={[16, 16]}>
+        {eventiData.map((eventi, index) => (
+          <Col key={index} xs={24} sm={12} md={8} lg={6}>
+            <Card
+              title={eventi.title}
+              bordered={true} // Aggiunge il bordo
+              style={{
+                borderRadius: "10px", // Rende gli angoli arrotondati
+                boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
+                marginBottom: "20px", // Ombra per l'effetto 3D
+              }}
+              cover={<img alt={eventi.title} src={eventi.image} style={{ width: "100%", height: "auto", objectFit: "cover" }} />}
+               // Aggiungi l'immagine
+            >
+              <p>{eventi.description}</p>
+              <div style={{ display: "flex", alignItems: "center", marginTop: "10px" }}>
+                <CalendarOutlined style={{ marginRight: "5px" }} />
+                <span>{eventi.date}</span>
+              </div>
+              <div style={{ display: "flex", alignItems: "center", marginTop: "10px" }}>
+                <EnvironmentOutlined style={{ marginRight: "5px" }} />
+                <span>{eventi.location}</span>
               </div>
             </Card>
           </Col>

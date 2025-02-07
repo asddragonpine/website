@@ -24,7 +24,7 @@ const Navbar = () => {
           <Link to="/">Home</Link>
         </Menu.Item>
         <Menu.Item key="event">
-          <Link to="/event">Events</Link>
+          <Link to="/event">Eventi</Link>
         </Menu.Item>
         <Menu.Item key="aboutus">
           <Link to="/aboutus">Chi siamo</Link>

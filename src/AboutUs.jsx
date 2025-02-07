@@ -24,15 +24,20 @@ const AboutUs = () => {
     <div style={{ minHeight: '100vh', backgroundColor: '#000', color: '#fff', position: 'relative' }}>
       {/* Video responsive */}
       <div style={{ position: 'relative', height: '100vh' }}>
-        <video
-          style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+      <video
+          style={{ width: "100%", height: "100%", objectFit: "cover" }}
           autoPlay
           muted
           loop
+          playsInline
         >
           <source
-            src={isMobile ? 'https://raw.githubusercontent.com/asddragonpine/website/main/video-dragon-verticale.mp4' : 'https://raw.githubusercontent.com/asddragonpine/website/main/video-dragon-orizzontale.mp4'}
-            type='video/mp4'
+            src={
+              isMobile
+                ? "https://raw.githubusercontent.com/asddragonpine/website/main/video-dragon-verticale.mp4"
+                : "https://raw.githubusercontent.com/asddragonpine/website/main/video-dragon-orizzontale.mp4"
+            }
+            type="video/mp4"
           />
           Il tuo browser non supporta il video.
         </video>
