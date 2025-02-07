@@ -78,6 +78,7 @@ const Home = () => {
     >
         
         <Helmet>
+        <meta name="google-site-verification" content="3yxivH0zWGjRM3L-B9mVmPeW7C8oFRxWlubczgycmdQ" />
         <title>Dragon Boat Piné - Sport e Gare a Baselga di Piné, Trento</title>
         <meta
           name="description"
