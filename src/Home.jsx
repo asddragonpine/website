@@ -79,41 +79,52 @@ const Home = () => {
         
         <Helmet>
         <meta name="google-site-verification" content="3yxivH0zWGjRM3L-B9mVmPeW7C8oFRxWlubczgycmdQ" />
-        <title>Dragon Boat Piné - Sport e Gare a Baselga di Piné, Trento</title>
+        <title>Asd Dragon Boat Piné - Sport e Gare a Baselga di Piné, Trento</title>
         <meta
           name="description"
-          content="Scopri Dragon Boat Piné: eventi sportivi, gare di dragon boat e attività sportive a Baselga di Piné, Trento. Vivi la bellezza del Trentino attraverso sport e natura."
+          content="Scopri Dragon Boat Piné: eventi sportivi, gare di dragon boat, festival e attività sportive a Baselga di Piné, Trento. Vivi la bellezza del Trentino attraverso sport e natura."
         />
         <meta
           name="keywords"
-          content="Dragon Boat Piné, Baselga di Piné, Trento, Trentino, sport, gare dragon boat, eventi sportivi, sport in Trentino, lago di Serraia"
+          content="Dragon Boat Piné, Baselga di Piné, Trento, Trentino, sport, festival, gare dragon boat, eventi sportivi, sport in Trentino, lago di Serraia"
         />
-        <meta name="author" content="Dragon Boat Piné Team" />
+        <meta name="author" content="Dragon Boat Piné" />
         
         {/* Meta Tag Open Graph */}
-        <meta property="og:title" content="Dragon Boat Piné - Sport e Gare a Baselga di Piné" />
+        <meta property="og:title" content="Asd Dragon Boat Piné - Sport e Gare a Baselga di Piné" />
         <meta 
           property="og:description" 
-          content="Partecipa alle emozionanti gare di dragon boat a Baselga di Piné, Trento. Scopri eventi e attività sportive nel cuore del Trentino." 
+          content="Partecipa al festival e alle gare di dragon boat a Baselga di Piné, Trento. Scopri eventi e attività sportive nel cuore del Trentino." 
         />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://asddragonpine.com" />
         <meta property="og:image" content="https://raw.githubusercontent.com/asddragonpine/website/main/dragon-asd.png"/>
-        <script type="application/ld+json">
-          {`
-            {
-              "@context": "https://schema.org",
-              "@type": "SportsEvent",
-              "name": "Dragon Boat Baselga di Piné",
-              "location": {
-                "@type": "Place",
-                "name": "Lago di Serraia",
-                "address": "Baselga di Piné, Trento, Italia"
-              },
-              "eventStatus": "https://schema.org/EventScheduled"
-            }
-          `}
-        </script>
+        <meta property="og:image:alt" content="Logo ufficiale di ASD Dragon Pine" />
+            <script type="application/ld+json">
+        {JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "SportsOrganization",
+        "name": "ASD Dragon Pine",
+        "url": "https://asddragonpine.com",
+        "logo": "https://raw.githubusercontent.com/asddragonpine/website/main/dragon-asd.png",
+        "description": "ASD Dragon Pine è un'associazione sportiva dedicata alla promozione dello sport del Dragon Boat a Baselga di Piné, Trento.",
+        "foundingDate": "2020",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Baselga di Piné",
+            "addressRegion": "TN",
+            "postalCode": "38042",
+            "addressCountry": "IT"
+        },
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "contactType": "Servizio clienti",
+            "email": "asddragonpine@gmail.com",
+            "availableLanguage": ["Italian"]
+        }
+        })}
+    </script>
+
       </Helmet>
 {/* 
 <MantineProvider >
