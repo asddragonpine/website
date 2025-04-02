@@ -473,6 +473,8 @@ export default App;
 */
 
 import React from "react";
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import { Routes, Route } from "react-router-dom";
 import Home from "./Home";
 import Event from "./Event";
@@ -484,20 +486,22 @@ import Gallery from "./Gallery";
 
 
 
-
-
 const App = () => {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
   return (
     <>
       <Navbar />
       <CookieConsent />
-
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/event" element={<Event />} />
         <Route path="/aboutus" element={<AboutUs />} />
         <Route path="/gallery" element={<Gallery />} />
-
       </Routes>
       <Footerbar />
     </>

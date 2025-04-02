@@ -413,7 +413,7 @@ const Home = () => {
             </Title>
             {/* Soluzione 1: Tag img standard */}
             <img 
-              src="/season2025dragon.jpg" 
+              src="https://raw.githubusercontent.com/asddragonpine/website/main/season2025dragon.jpg" 
               alt="Race Calendar 2025"
               className="races-image"
             />
