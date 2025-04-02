@@ -9,14 +9,14 @@ const Event = () => {
         description: "Festeggia con noi la festa dell'altopiano più attesa dell'anno!",
         date: "13/07/2025 - 14/07/2025",
         location: "Balsega di Piné",
-        image: "https://raw.githubusercontent.com/asddragonpine/website/main/dragon-festival.png", // Aggiungi immagine appropriata
+        image: "https://raw.githubusercontent.com/asddragonpine/website/main/dragonsprint.jpg", // Aggiungi immagine appropriata
       },
       {
         title: "DragoLases",
         description: "Festeggia con noi la festa di Lases più attesa dell'anno!",
         date: "02/07/2025",
         location: "Lases",
-        image: "https://via.placeholder.com/150", // Aggiungi immagine appropriata
+        image: "https://raw.githubusercontent.com/asddragonpine/website/main/dragonlases.jpg", // Aggiungi immagine appropriata
       },
   ];
 
@@ -26,42 +26,42 @@ const Event = () => {
       description: "Ekon Cup a S.Cristoforo, gara a circuito lunga circa 650mt",
       date: "07/06/2025",
       location: "S.Cristoforo",
-      image: "https://via.placeholder.com/150", // Aggiungi immagine appropriata
+      image: "https://raw.githubusercontent.com/asddragonpine/website/main/ekon.jpg", // Aggiungi immagine appropriata
     },
     {
       title: "DragoLases",
       description: "Gara a giro di boa, lunga circa 350mt",
       date: "05/06/2025",
       location: "Lases",
-      image: "https://via.placeholder.com/150", // Aggiungi immagine appropriata
+      image: "https://raw.githubusercontent.com/asddragonpine/website/main/dragonlases.jpg", // Aggiungi immagine appropriata
     },
     {
         title: "DragonSprint",
         description: "Gara dritta a sprint, lunga circa 300mt",
         date: "05/06/2025",
-        location: "Lases",
-        image: "https://via.placeholder.com/150", // Aggiungi immagine appropriata
+        location: "Baselga di Piné",
+        image: "https://raw.githubusercontent.com/asddragonpine/website/main/dragonsprint.jpg", // Aggiungi immagine appropriata
       },
     {
         title: "Dragononesa",
         description: "Gara a giro di boa, lunga circa 6km",
         date: "28/07/2025",
         location: "Coredo lago di S.Giustina",
-        image: "https://via.placeholder.com/150", // Aggiungi immagine appropriata
+        image: "https://raw.githubusercontent.com/asddragonpine/website/main/dragononesa.jpg", // Aggiungi immagine appropriata
       },
       {
         title: "Palio dei Draghi",
         description: "Gara dritta, lunga circa 500mt",
         date: "29/08/2025",
         location: "Caldonazzo",
-        image: "https://via.placeholder.com/150", // Aggiungi immagine appropriata
+        image: "https://raw.githubusercontent.com/asddragonpine/website/main/paliodraghi.jpg", // Aggiungi immagine appropriata
       },
       {
         title: "Dragon Flash",
         description: "Gara dritta, lunga circa 180mt",
         date: "08/09/2025",
         location: "Borgo Valsugana",
-        image: "https://via.placeholder.com/150", // Aggiungi immagine appropriata
+        image: "https://raw.githubusercontent.com/asddragonpine/website/main/dragonflash.jpg", // Aggiungi immagine appropriata
       },
   ];
 

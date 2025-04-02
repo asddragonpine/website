@@ -480,6 +480,8 @@ import Navbar from "./Navbar";
 import Footerbar from "./Footerbar";
 import CookieConsent from './CookieConsent'; // Assicurati che il percorso sia corretto
 import AboutUs from "./AboutUs";
+import Gallery from "./Gallery";
+
 
 
 
@@ -494,6 +496,8 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/event" element={<Event />} />
         <Route path="/aboutus" element={<AboutUs />} />
+        <Route path="/gallery" element={<Gallery />} />
+
       </Routes>
       <Footerbar />
     </>

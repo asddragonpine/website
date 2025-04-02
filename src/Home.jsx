@@ -8,7 +8,8 @@ import Event from "./Event"; // Pagina Eventi
 import Navbar from "./Navbar"; // Se il Menu è separato
 import { Container, Overlay, Text, Title, Paper, Divider } from '@mantine/core';
 import classes from './HeroContentLeft.module.css';
-import { InstagramOutlined } from '@ant-design/icons';
+import { LinkOutlined } from "@ant-design/icons";
+import { InstagramOutlined, CalendarOutlined  } from '@ant-design/icons';
 import { useMediaQuery } from "react-responsive";
 import { Helmet } from "react-helmet";
 
@@ -23,6 +24,7 @@ const Home = () => {
 
   const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
   const isTablet = useMediaQuery({ query: "(max-width: 1024px)" });
+  const driveFolderLink = "https://drive.google.com/drive/folders/1F4xudRaM626AhCEacPAccGzUittKQOXy";
 
   const heroHeight = isMobile ? "40vh" : isTablet ? "70vh" : "100vh";
   const titleFontSize = isMobile ? "20px" : isTablet ? "26px" : "50px";
@@ -79,14 +81,14 @@ const Home = () => {
         
         <Helmet>
         <meta name="google-site-verification" content="3yxivH0zWGjRM3L-B9mVmPeW7C8oFRxWlubczgycmdQ" />
-        <title>Asd Dragon Boat Piné - Sport e Gare a Baselga di Piné, Trento</title>
+        <title>Asd Dragon Boat Piné - Dragonboat, Sport e Gare a Baselga di Piné, Trento</title>
         <meta
           name="description"
           content="Scopri Dragon Boat Piné: eventi sportivi, gare di dragon boat, festival e attività sportive a Baselga di Piné, Trento. Vivi la bellezza del Trentino attraverso sport e natura."
         />
         <meta
           name="keywords"
-          content="Dragon Boat Piné, Baselga di Piné, Trento, Trentino, sport, festival, gare dragon boat, eventi sportivi, sport in Trentino, lago di Serraia"
+          content="Dragon Boat Baselga di Piné, Pine, Trento, Trentino, sport, dragonboat, festival, gare dragonboat, eventi sportivi, sport in Trentino, lago di Serraia"
         />
         <meta name="author" content="Dragon Boat Piné" />
         
@@ -94,7 +96,7 @@ const Home = () => {
         <meta property="og:title" content="Asd Dragon Boat Piné - Sport e Gare a Baselga di Piné" />
         <meta 
           property="og:description" 
-          content="Partecipa al festival e alle gare di dragon boat a Baselga di Piné, Trento. Scopri eventi e attività sportive nel cuore del Trentino." 
+          content="Partecipa al festival e alle gare di dragonboat a Baselga di Piné, Trento. Scopri eventi e attività sportive nel cuore del Trentino." 
         />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://asddragonpine.com" />
@@ -107,7 +109,7 @@ const Home = () => {
         "name": "ASD Dragon Pine",
         "url": "https://asddragonpine.com",
         "logo": "https://raw.githubusercontent.com/asddragonpine/website/main/dragon-asd.png",
-        "description": "ASD Dragon Pine è un'associazione sportiva dedicata alla promozione dello sport del Dragon Boat a Baselga di Piné, Trento.",
+        "description": "ASD Dragon Pine è un'associazione sportiva dedicata alla promozione dello sport del DragonBoat a Baselga di Piné, Trento.",
         "foundingDate": "2020",
         "address": {
             "@type": "PostalAddress",
@@ -159,8 +161,8 @@ const Home = () => {
             top: 0,
             left: 0,
             right: 0,
-            bottom: 0,
-            background: "linear-gradient(180deg, rgba(0, 0, 0, 0) 70%, rgba(0, 0, 0, 1) 100%)",
+            bottom: -1,
+            background: "linear-gradient(180deg, rgba(255, 255, 255, 0) 80%, rgba(255, 255, 255, 1) 100%)",
             zIndex: 1,
           }}
         />
@@ -188,7 +190,11 @@ const Home = () => {
               left: "10px",
             }}
           >
-            THE OFFICIAL HOME OF <br /> ASD DRAGON PINÉ
+              <span style={{ color: "white", textShadow: "2px 2px 4px rgba(0,0,0,0.5)" }}>
+    THE OFFICIAL HOME OF
+  </span> <br /> 
+            <span style={{ color: "#f2460c", textShadow: "2px 2px 4px rgba(0,0,0,0.5)", }}>ASD DRAGON PINÉ</span>
+
           </Title>
         </Container>
       </div>
@@ -356,41 +362,81 @@ const Home = () => {
           animate={{ opacity: 1 }}
           transition={{ duration: 2, delay: 1 }}
         >
- <div
-  style={{
-    textAlign: "center",
-    marginTop: "70px",
-    marginBottom: "70px",
-    padding: "20px", // Aggiungi un po' di spazio interno
-    border: "2px solid #f2460c", // Colore del bordo
-    borderRadius: "10px", // Angoli arrotondati
-    boxShadow: "0 0 15px rgba(0, 0, 0, 0.6)", // Ombra intorno al bordo del div
-    backgroundColor: "#fff", // Imposta uno sfondo bianco per contrastare con il bordo
-    maxWidth: "500px", // Limita la larghezza massima per evitare che diventi troppo largo
-    margin: "0 auto", // Centra il contenitore
+
+  <div className="home-content">
+
+  <Card 
+  className="home-card" 
+  bordered={true} 
+  style={{ 
+    borderRadius: '16px',
+    boxShadow: '0 4px 8px rgba(0,0,0,0.1)'
   }}
 >
-  <p style={{ fontSize: "24px", marginBottom: "20px" }}>Vuoi unirti a noi?</p>
-  <Button
-    type="primary"
-    href="https://docs.google.com/forms/d/e/1FAIpQLScgdrRaX-IeIYEoklUlq1LydeHWuVRKZkNphmEfp7BrE33-Tw/viewform?usp=sf_link"
-    target="_blank"
-    size="large"
-    style={{
-      color: "white",
-      backgroundColor: "#f2460c",
-      fontSize: "20px",
-      padding: "15px 30px",
-      boxShadow: "0 0 15px rgba(0, 0, 0, 0.2)", // Ombra intorno al bordo del bottone
+  <Title level={2} className="home-title">MODULO ISCRIZIONE</Title>
+  <Text className="home-text" style={{ fontSize: '16px', marginTop: '16px' }}>
+    Vuoi unirti a noi?
+  </Text>
+  <div style={{ textAlign: 'center', marginTop: '24px' }}>
+    <Button
+      type="primary"
+      icon={<LinkOutlined />}
+      size="large"
+      href={driveFolderLink}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="home-button"
+      style={{ borderRadius: '30px' }}
+    >
+      Compila il modulo
+    </Button>
+  </div>
+  </Card>
 
-    }}
-  >
-    Compila il modulo
-  </Button>
 </div>
 
 
+
+
         </motion.div>
+        
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+        >
+        <div className="races-section">
+        <Row gutter={[24, 24]} align="middle" justify="center">
+          <Col xs={24} md={12} className="races-image-col">
+          <Title level={2} className="races-title">
+               RACES SEASON 2025
+            </Title>
+            {/* Soluzione 1: Tag img standard */}
+            <img 
+              src="/season2025dragon.jpg" 
+              alt="Race Calendar 2025"
+              className="races-image"
+            />
+            
+            {/* Soluzione 2: Div con background image (decommentare per usare) 
+            <div 
+              className="races-image-container" 
+              style={{ backgroundImage: "url('/images/races-2025.jpg')" }}
+              aria-label="Race Calendar 2025"
+            ></div>
+            */}
+          </Col>
+          <Col xs={24} md={12} className="races-content-col">
+            
+            <Text className="races-description">
+              Scopri il calendario delle competizioni per la stagione 2025. 
+              Preparati a vivere un anno ricco di emozioni, sfide e adrenalina sui laghi più belli del Trentino.
+            </Text>
+          </Col>
+        </Row>
+      </div>
+
+      </motion.div>
 
 
         <div style={{ padding: "70px", background: "#f5f5f5", textAlign: "center", marginTop: "50px" }}>

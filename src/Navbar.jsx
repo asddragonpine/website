@@ -15,7 +15,7 @@ const Navbar = () => {
         width: "100%",
         margin: 0,
         background: "linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0))",
-        backdropFilter: "blur(10px)",
+        backdropFilter: "blur(5px)",
         borderBottom: "none",
         color: "#fff",
 
@@ -28,6 +28,9 @@ const Navbar = () => {
         </Menu.Item>
         <Menu.Item key="aboutus">
           <Link to="/aboutus">Chi siamo</Link>
+        </Menu.Item>
+        <Menu.Item key="gallery">
+          <Link to="/gallery">Gallery</Link>
         </Menu.Item>
       </Menu>
     );

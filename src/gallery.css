@@ -1,0 +1,78 @@
+/* Sfondo minimalista con leggero gradiente */
+.drive-container {
+    background: linear-gradient(120deg, #ecebeb, #e2e5e9);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    align-content: center;
+  }
+  
+  /* Card con stile premium */
+  .drive-card {
+    padding-bottom: 80px !important; /* Aumenta lo spazio interno in basso */
+    height: auto; /* Rimuove altezza fissa */
+    min-height: 450px; /* Imposta altezza minima più alta */
+    text-align: center;
+    background: #22272e;
+    border-radius: 20px;
+    padding: 40px !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  /* Titolo con eleganza moderna */
+  .drive-title {
+    color: #f5f5f5;
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+  }
+  
+  /* Testo descrittivo */
+  .drive-text {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 18px;
+    margin-top: 10px;
+    line-height: 1.5;
+  }
+  
+    /* Testo descrittivo */
+    .drive-subtext {
+        color: rgba(255, 255, 255, 0.8); /* Leggermente più visibile */
+        font-size: 18px;
+        margin-top: 60px; /* Distanza dal bottone */
+        line-height: 1.5; /* Spaziatura normale */
+        font-weight: 500;
+        margin-top: auto; /* Lo spinge in fondo */
+        padding-top: 20px; /* Aggiunge spazio sopra */
+      }
+
+  /* Pulsante con effetto minimalista */
+  .drive-button {
+    background: linear-gradient(90deg, #ff7e5f, #ff4e50);
+    color: white;
+    font-weight: 700;
+    padding: 14px 26px;
+    font-size: 18px;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(255, 78, 80, 0.4);
+  }
+  
+  /* Effetto hover elegante */
+  .drive-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(255, 78, 80, 0.6);
+  }
+  
+  .custom-divider {
+    border: none;
+    height: 2px;
+    background: #ff4e515c;
+    margin: 20px 0;
+    margin-top: 50px;
+  }

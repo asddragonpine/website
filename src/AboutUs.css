@@ -1,76 +1,221 @@
+/* AboutUs.css - Versione pulita con Framer Motion */
+
+/* Base Styles */
 .about-us {
-    position: relative;
-    height: 100vh; /* Imposta l'altezza della pagina per la visualizzazione a schermo intero */
-    overflow: hidden;
+  width: 100%;
+  background-color: #717171;
+  color: #333;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Video Section */
+.video-section {
+  position: relative;
+  height: 100vh;
+  background-color: #000;
+  overflow: hidden;
+}
+
+.video-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Arrow Animation */
+@keyframes floatArrow {
+  0% {
+    transform: translateY(0) translateX(-50%);
+  }
+  50% {
+    transform: translateY(-15px) translateX(-50%);
+  }
+  100% {
+    transform: translateY(0) translateX(-50%);
+  }
+}
+
+@keyframes pulseArrow {
+  0% {
+    opacity: 0.7;
+    filter: drop-shadow(0 0 3px rgba(255, 78, 80, 0.3));
+  }
+  50% {
+    opacity: 1;
+    filter: drop-shadow(0 0 8px rgba(255, 78, 80, 0.6));
+  }
+  100% {
+    opacity: 0.7;
+    filter: drop-shadow(0 0 3px rgba(255, 78, 80, 0.3));
+  }
+}
+
+.scroll-arrow {
+  position: absolute !important;
+  bottom: 5% !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  color: #ff4e50 !important;
+  text-align: center !important;
+  z-index: 10 !important;
+  animation: floatArrow 2s ease-in-out infinite, pulseArrow 2s ease-in-out infinite !important;
+  cursor: pointer !important;
+}
+
+/* Content Styles */
+.about-us-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  background-color: #cccccc;
+  position: relative;
+  z-index: 2;
+}
+
+.main-title {
+  text-align: center;
+  font-size: 36px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.main-title:after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #ff4e50, #f9d423);
+  margin: 15px auto 0;
+  border-radius: 2px;
+}
+
+.about-section {
+  margin-bottom: 70px;
+}
+
+.section-title {
+  font-size: 28px !important;
+  font-weight: 700 !important;
+  color: #333 !important;
+  margin-bottom: 25px !important;
+  position: relative !important;
+  display: inline-block !important;
+}
+
+.section-title:after {
+  content: '' !important;
+  position: absolute !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  width: 40px !important;
+  height: 3px !important;
+  background: linear-gradient(90deg, #ff4e50, #f9d423) !important;
+}
+
+.about-paragraph {
+  font-size: 16px !important;
+  line-height: 1.8 !important;
+  color: #4a4a4a !important;
+  margin-bottom: 20px !important;
+  text-align: left !important;
+}
+
+/* Card Styles */
+.value-card {
+  height: 100% !important;
+  border-radius: 12px !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08) !important;
+  transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+  overflow: hidden !important;
+  border: 1px solid rgba(0, 0, 0, 0.06) !important;
+}
+
+.value-card:hover {
+  transform: translateY(-10px) !important;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12) !important;
+}
+
+.value-card h4 {
+  color: #333 !important;
+  margin-bottom: 16px !important;
+  font-weight: 600 !important;
+}
+
+/* Activities List */
+.activities-list {
+  font-size: 16px !important;
+  line-height: 1.8 !important;
+  color: #4a4a4a !important;
+  padding-left: 20px !important;
+  text-align: left !important;
+}
+
+.activities-list li {
+  margin-bottom: 12px !important;
+  position: relative !important;
+}
+
+.activities-list li strong {
+  color: #ff4e50 !important;
+  font-weight: 600 !important;
+}
+
+/* Button styles */
+.button-container {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.join-button {
+  height: 50px !important;
+  font-size: 16px !important;
+  border-radius: 50px !important;
+  background: linear-gradient(135deg, #ff4e50, #f9d423) !important;
+  border: none !important;
+  padding: 0 35px !important;
+  box-shadow: 0 8px 15px rgba(255, 78, 80, 0.3) !important;
+  transition: all 0.3s ease !important;
+}
+
+.join-button:hover {
+  transform: translateY(-5px) !important;
+  box-shadow: 0 12px 20px rgba(255, 78, 80, 0.4) !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .main-title {
+    font-size: 28px;
   }
   
-  .video-container {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
+  .section-title {
+    font-size: 22px !important;
   }
   
-  .background-video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Assicura che il video copra l'intero schermo */
+  .about-paragraph {
+    font-size: 15px !important;
   }
   
-  /* Nascondi il video orizzontale su mobile */
-  .desktop-video {
-    display: block;
+  .activities-list {
+    font-size: 15px !important;
   }
   
-  .mobile-video {
-    display: none;
+  .about-section {
+    margin-bottom: 50px;
   }
   
-  /* Aggiungi media query per dispositivi mobili (larghezza max 768px) */
-  @media (max-width: 768px) {
-    .desktop-video {
-      display: none; /* Nascondi il video orizzontale */
-    }
-  
-    .mobile-video {
-      display: block; /* Mostra il video verticale */
-    }
+  .value-card {
+    margin-bottom: 15px !important;
   }
-  
-  .overlay {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 1; /* Il logo deve apparire sopra il video */
-  }
-  
-  .logo {
-    width: 150px; /* Dimensiona il logo a piacere */
-    height: auto;
-    opacity: 0; /* Impostato a 0 per l'animazione */
-  }
-  
-  .scroll-text {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 24px;
-    color: #fff;
-    text-align: center;
-    z-index: 2; /* Assicurati che il testo appaia sopra gli altri contenuti */
-  }
-  
-  .content {
-    padding: 20px;
-    background-color: #fff;
-    color: #333;
-    text-align: center;
-    height: 200vh; /* Assicura che la pagina abbia spazio per essere scrollata */
-    margin-top: 10px;
-  }
-  
+}

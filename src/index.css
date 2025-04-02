@@ -180,9 +180,169 @@ body {
 /* Personalizza il Menu di Ant Design */
 .ant-menu-dark {
   background-color: #12121272 !important;
+
 }
 
 .ant-menu-dark .ant-menu-item-selected {
-  background-color: #f2460c !important;
+  background-color: #f2460cd0 !important;
+  backdrop-filter: blur(10px);
+  border-radius: 3px !important;
+
 }
 
+/* Sfondo minimalista con leggero gradiente */
+.home-container {
+  background: linear-gradient(120deg, #ecebeb, #e2e5e9);
+  width: 100%;
+  display: flex;
+  justify-content: center !important;
+  align-items: center !important;
+  min-height: 100vh;
+  margin: 0 !important;
+  padding: 0 !important;
+
+}
+
+.home-card {
+  padding-bottom: 30px !important; /* Aumenta lo spazio interno in basso */
+  text-align: center;
+  background: #22272e;
+  border-radius: 20px;
+  /* padding: 30px !important; */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+
+  width: 100% !important;
+  max-width: 500px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.home-card .ant-card-body {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  text-align: center !important;
+}
+
+
+/* Titolo con eleganza moderna */
+.home-title {
+  color: #f5f5f5;
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+/* Testo descrittivo */
+.home-text {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 18px;
+  margin-top: 10px;
+  line-height: 1.5;
+}
+
+
+/* Pulsante con effetto minimalista */
+.home-button {
+  background: linear-gradient(90deg, #ff7e5f, #ff4e50);
+  color: white;
+  font-weight: 700;
+  padding: 30px 30px;
+  font-size: 18px;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(255, 78, 80, 0.4);
+}
+
+/* Effetto hover elegante */
+.home-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(255, 78, 80, 0.6);
+}
+
+
+/* index.css */
+/* Stili per la sezione "Gare Stagione 2025" */
+.races-section {
+  padding: 60px 20px;
+  background-color: #5fffd2;
+  margin-top: 40px;
+  border-radius: 20px;
+}
+
+
+/* Stile per img tag standard */
+.races-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+  object-fit: cover;
+  max-height: 400px; /* Imposta l'altezza massima desiderata */
+}
+
+.races-image:hover {
+  transform: scale(1.02);
+}
+
+/* Stile per div con background-image (alternativa) */
+.races-image-container {
+  width: 100%;
+  height: 400px;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: transform 0.3s;
+}
+
+.races-image-container:hover {
+  transform: scale(1.02);
+}
+
+.races-title {
+  color: #1a1a1a !important;
+  margin-bottom: 24px !important;
+  font-weight: 700 !important;
+  display: flex !important;
+  align-items: center !important;
+}
+
+.races-icon {
+  margin-right: 12px;
+  color: #1890ff;
+  font-size: 28px;
+}
+
+.races-description {
+  font-size: 16px !important;
+  line-height: 1.8 !important;
+  color: #4a4a4a !important;
+  margin-bottom: 24px !important;
+  display: block;
+}
+
+.races-button:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 16px rgba(24, 144, 255, 0.4) !important;
+}
+
+/* Responsività */
+@media (max-width: 768px) {
+  .races-content-col {
+    text-align: center;
+    padding-top: 24px;
+  }
+  
+  .races-title {
+    justify-content: center;
+  }
+  
+  .races-image, .races-image-container {
+    height: auto ; /* Altezza ridotta su mobile */
+    margin: 0 auto;
+  }
+}
