@@ -1,5 +1,5 @@
 import { StrictMode } from "react";
-import { BrowserRouter } from "react-router-dom";
+import { HashRouter } from "react-router-dom";
 import ReactDOM from "react-dom/client";
 import React from "react";
 import { MantineProvider } from "@mantine/core"; // Importa MantineProvider
@@ -11,10 +11,10 @@ import App from "./App";
 import Home from "./Home.jsx";
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <BrowserRouter>
-      <MantineProvider theme={{ colorScheme: "light" }}>
+    <HashRouter>
+    <MantineProvider theme={{ colorScheme: "light" }}>
         <App />
       </MantineProvider>
-    </BrowserRouter>
-  </React.StrictMode>
+      </HashRouter>
+      </React.StrictMode>
 );
