@@ -1,10 +1,18 @@
 import React from "react";
 import { Menu } from "antd";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom"; // Usa NavLink
+import "./navbar.css";
 
 const Navbar = () => {
-    return (
-      <Menu theme="dark" mode="horizontal" defaultSelectedKeys={["home"]} style={{
+  const location = useLocation();
+  const selectedKey = location.pathname;
+
+  return (
+    <Menu
+      theme="dark"
+      mode="horizontal"
+      selectedKeys={[selectedKey]}
+      style={{
         justifyContent: "center",
         position: "fixed",
         top: 0,
@@ -18,22 +26,22 @@ const Navbar = () => {
         backdropFilter: "blur(5px)",
         borderBottom: "none",
         color: "#fff",
-
-      }}>
-        <Menu.Item key="home">
-          <Link to="/">Home</Link>
-        </Menu.Item>
-        <Menu.Item key="event">
-          <Link to="/event">Eventi</Link>
-        </Menu.Item>
-        <Menu.Item key="aboutus">
-          <Link to="/aboutus">Chi siamo</Link>
-        </Menu.Item>
-        <Menu.Item key="gallery">
-          <Link to="/gallery">Gallery</Link>
-        </Menu.Item>
-      </Menu>
-    );
-  };
+      }}
+    >
+      <Menu.Item key="/">
+        <Link to="/">Home</Link>
+      </Menu.Item>
+      <Menu.Item key="/aboutus">
+        <Link to="/aboutus">About Us</Link>
+      </Menu.Item>
+      <Menu.Item key="/event">
+        <Link to="/event">Event</Link>
+      </Menu.Item>
+      <Menu.Item key="/gallery">
+        <Link to="/gallery">Gallery</Link>
+      </Menu.Item>
+    </Menu>
+  );
+};
 
 export default Navbar;

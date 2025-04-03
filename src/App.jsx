@@ -472,39 +472,87 @@ const App = () => {
 export default App;
 */
 
-import React from "react";
-import { useEffect } from "react";
+// import React, { useEffect } from "react";
+// import { useLocation } from "react-router-dom";
+// import Home from "./Home";
+// import Event from "./Event";
+// import Navbar from "./Navbar";
+// import Footerbar from "./Footerbar";
+// import CookieConsent from './CookieConsent';
+// import AboutUs from "./AboutUs";
+// import Gallery from "./Gallery";
+// import { Route, Routes } from 'react-router-dom';
+
+// const App = () => {
+//   const { pathname } = useLocation();
+
+//   useEffect(() => {
+//     window.scrollTo(0, 0);
+//   }, [pathname]);
+
+//   return (
+//     <>
+//       <Navbar />
+//       <CookieConsent />
+//       <Routes>
+//         <Route path="/" element={<Home />} />
+//         <Route path="/event" element={<Event />} />
+//         <Route path="/aboutus" element={<AboutUs />} />
+//         <Route path="/gallery" element={<Gallery />} />
+//       </Routes>
+//       <Footerbar />
+//     </>
+//   );
+// };
+
+// export default App;
+
+
+import React, { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
+import { useNavigate } from 'react-router-dom';
+
+import { motion } from "framer-motion";
 import { Routes, Route } from "react-router-dom";
+import { Layout, Spin } from "antd";
+import Navbar from "./Navbar";
 import Home from "./Home";
 import Event from "./Event";
-import Navbar from "./Navbar";
 import Footerbar from "./Footerbar";
-import CookieConsent from './CookieConsent'; // Assicurati che il percorso sia corretto
+import CookieConsent from './CookieConsent';
 import AboutUs from "./AboutUs";
 import Gallery from "./Gallery";
 
-
+const { Header, Content, Footer } = Layout;
 
 const App = () => {
-  const { pathname } = useLocation();
+const { pathname } = useLocation();
 
   useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [pathname]);
+    setTimeout(() => {
+        window.scrollTo(0, 0);
+      }, 50);
+      }, [pathname]);
+
 
   return (
     <>
-      <Navbar />
-      <CookieConsent />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/event" element={<Event />} />
-        <Route path="/aboutus" element={<AboutUs />} />
-        <Route path="/gallery" element={<Gallery />} />
-      </Routes>
-      <Footerbar />
-    </>
+        <Navbar />
+       <CookieConsent />
+
+        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1 }}>
+          <Routes>
+            <Route path="/website" element={<Home />} />
+            <Route path="/" element={<Home />} />
+            <Route path="/event" element={<Event />} />
+            <Route path="/aboutus" element={<AboutUs />} />
+            <Route path="/gallery" element={<Gallery />} />
+          </Routes>
+          <Footerbar />
+        </motion.div>
+
+
+      </>
   );
 };
 

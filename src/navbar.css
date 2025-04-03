@@ -1,0 +1,13 @@
+/* Personalizza il Menu di Ant Design */
+.ant-menu-dark {
+    background-color: #12121272 !important;
+  
+  }
+  
+  .ant-menu-dark .ant-menu-item-selected {
+    background-color: #f2460cd0 !important;
+    backdrop-filter: blur(10px);
+    border-radius: 3px !important;
+  
+  }
+  

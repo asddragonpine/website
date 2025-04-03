@@ -3,8 +3,8 @@
 /* Base Styles */
 .about-us {
   width: 100%;
-  background-color: #717171;
-  color: #333;
+  background-color: #151515;
+  color: #e8e8e8;
   font-family: 'Poppins', sans-serif;
 }
 
@@ -46,22 +46,22 @@
 
 @keyframes pulseArrow {
   0% {
-    opacity: 0.7;
-    filter: drop-shadow(0 0 3px rgba(255, 78, 80, 0.3));
+    opacity: 1;
+    filter: drop-shadow(0 0 20px rgb(45, 42, 42));
   }
   50% {
     opacity: 1;
-    filter: drop-shadow(0 0 8px rgba(255, 78, 80, 0.6));
+    filter: drop-shadow(50px 50px 60px rgb(255, 78, 81));
   }
   100% {
-    opacity: 0.7;
-    filter: drop-shadow(0 0 3px rgba(255, 78, 80, 0.3));
+    opacity: 1;
+    filter: drop-shadow(0 0 20px rgb(45, 42, 42));
   }
 }
 
 .scroll-arrow {
   position: absolute !important;
-  bottom: 5% !important;
+  bottom: 15% !important;
   left: 50% !important;
   transform: translateX(-50%) !important;
   color: #ff4e50 !important;
@@ -76,7 +76,7 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 40px 20px;
-  background-color: #cccccc;
+  background-color: #212121;
   position: relative;
   z-index: 2;
 }
@@ -85,9 +85,10 @@
   text-align: center;
   font-size: 36px;
   font-weight: 700;
-  color: #333;
+  color: #ee5a5afe;
   margin-bottom: 40px;
   position: relative;
+  z-index: 2;
 }
 
 .main-title:after {
@@ -107,10 +108,12 @@
 .section-title {
   font-size: 28px !important;
   font-weight: 700 !important;
-  color: #333 !important;
+  color: #5ddaf3 !important;
   margin-bottom: 25px !important;
   position: relative !important;
   display: inline-block !important;
+  z-index: 2;
+
 }
 
 .section-title:after {
@@ -120,15 +123,17 @@
   left: 0 !important;
   width: 40px !important;
   height: 3px !important;
-  background: linear-gradient(90deg, #ff4e50, #f9d423) !important;
+  /* background: linear-gradient(90deg, #ff4e50, #f9d423) !important; */
 }
 
 .about-paragraph {
   font-size: 16px !important;
   line-height: 1.8 !important;
-  color: #4a4a4a !important;
+  color: #ebebeb !important;
   margin-bottom: 20px !important;
   text-align: left !important;
+  z-index: 2;
+
 }
 
 /* Card Styles */
@@ -156,7 +161,7 @@
 .activities-list {
   font-size: 16px !important;
   line-height: 1.8 !important;
-  color: #4a4a4a !important;
+  color: #efefef !important;
   padding-left: 20px !important;
   text-align: left !important;
 }
@@ -167,7 +172,7 @@
 }
 
 .activities-list li strong {
-  color: #ff4e50 !important;
+  color: #e87254 !important;
   font-weight: 600 !important;
 }
 
