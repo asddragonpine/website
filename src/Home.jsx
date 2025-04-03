@@ -34,7 +34,7 @@ const Home = () => {
   const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
   const isTablet = useMediaQuery({ query: "(max-width: 1024px)" });
   const driveFolderLink =
-    "https://drive.google.com/drive/folders/1F4xudRaM626AhCEacPAccGzUittKQOXy";
+    "https://docs.google.com/forms/d/e/1FAIpQLScgdrRaX-IeIYEoklUlq1LydeHWuVRKZkNphmEfp7BrE33-Tw/viewform?usp=sf_link";
 
   const heroHeight = isMobile ? "40vh" : isTablet ? "70vh" : "100vh";
   const titleFontSize = isMobile ? "20px" : isTablet ? "26px" : "50px";
