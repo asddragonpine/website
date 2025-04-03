@@ -34,46 +34,45 @@
 /* Arrow Animation */
 @keyframes floatArrow {
   0% {
-    transform: translateY(0) translateX(-50%);
+    transform: translateY(0);
   }
   50% {
-    transform: translateY(-15px) translateX(-50%);
+    transform: translateY(-15px);
   }
   100% {
-    transform: translateY(0) translateX(-50%);
+    transform: translateY(0);
   }
 }
 
 @keyframes pulseArrow {
   0% {
     opacity: 1;
-    filter: drop-shadow(0 0 20px rgb(45, 42, 42));
+    filter: drop-shadow(0 0 10px rgba(255, 78, 81, 0.5));
   }
   50% {
     opacity: 1;
-    filter: drop-shadow(50px 50px 60px rgb(255, 78, 81));
+    filter: drop-shadow(0 0 30px rgba(255, 78, 81, 1));
   }
   100% {
     opacity: 1;
-    filter: drop-shadow(0 0 20px rgb(45, 42, 42));
+    filter: drop-shadow(0 0 10px rgba(255, 78, 81, 0.5));
   }
 }
 
 .scroll-arrow {
   position: absolute !important;
   bottom: 15% !important;
-  left: 50% !important;
-  transform: translateX(-50%) !important;
+  position-area: bottom;
   color: #ff4e50 !important;
   text-align: center !important;
   z-index: 10 !important;
-  animation: floatArrow 2s ease-in-out infinite, pulseArrow 2s ease-in-out infinite !important;
+  animation: floatArrow 2s infinite ease-in-out , pulseArrow 2s ease-in-out infinite !important;
   cursor: pointer !important;
 }
 
 /* Content Styles */
 .about-us-container {
-  max-width: 1200px;
+width: 100%;
   margin: 0 auto;
   padding: 40px 20px;
   background-color: #212121;
