@@ -365,18 +365,24 @@ const Home = () => {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 2, delay: 2 }}
         >
-          <Typography.Title
-            level={2}
-            style={{
-              textAlign: "center",
-              marginTop: "20px",
-              height: "100px",
-              fontFamily: "fantasy",
-              fontSize: "40px",
-            }}
-          >
-            Benvenuto
-          </Typography.Title>
+  <Typography.Title
+    level={2}
+    style={{
+      textAlign: "center",
+      marginTop: "20px",
+      height: "100px",
+      fontFamily: "'Raleway', sans-serif",
+      fontWeight: "800",
+      fontSize: "48px",
+      letterSpacing: "2px",
+      background: "linear-gradient(to right, #ff4e50, #f9d423)",
+      WebkitBackgroundClip: "text",
+      WebkitTextFillColor: "transparent",
+      textTransform: "uppercase",
+    }}
+  >
+    Benvenuto
+  </Typography.Title>
         </motion.div>
 
         {/*
