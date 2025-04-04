@@ -3,6 +3,11 @@ import { motion } from "framer-motion";
 import { ArrowDown, Mail, MapPin } from "lucide-react";
 import { Typography, Row, Col, Card, Button } from "antd";
 import "./AboutUs.css";
+import { InstagramOutlined } from "@ant-design/icons";
+
+
+
+
 
 const { Title, Paragraph } = Typography;
 
@@ -112,7 +117,7 @@ const AboutUs = () => {
             style={{
               content: "''",
               position: "absolute",
-              top: -300,
+              top: -350,
               left: 0,
               right: 0,
               bottom: "90%",
@@ -389,43 +394,67 @@ const AboutUs = () => {
                 di mettersi in gioco e scoprire la gioia di pagaiare insieme!
               </Paragraph>
             </motion.div>
-            <motion.div
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 1, delay: 1 }}
-            >
-              <Button
-                type="primary"
-                icon={<Mail size={18} />}
-                size="large"
-                className="join-button"
-                href="mailto:asddragonpine@gmail.com"
-              >
-                Contattaci
-              </Button>
-            </motion.div>
+            
 
-            <Paragraph> </Paragraph>
 
-            <motion.div variants={fadeInUp} initial="hidden" animate="visible">
-              <Card className="value-card">
-                <Title level={4}>Contatti</Title>
-
-                <Paragraph>
-                  <Mail size={18} />
-                  <a href="mailto:asddragonpine@gmail.com">
-                    {" "}
-                    asddragonpine@gmail.com
-                  </a>
-                </Paragraph>
-
-                <Paragraph>
-                  <MapPin size={18} />
-                  Baselga di Piné
-                </Paragraph>
-              </Card>
-            </motion.div>
+            <motion.div 
+  variants={fadeInUp} 
+  initial="hidden" 
+  animate="visible"
+  className="contact-card-container"
+>
+  <Card className="contact-card">
+    <div className="contact-card-header">
+      <Title level={3}>Contattaci</Title>
+      <div className="contact-divider"></div>
+    </div>
+    
+    <div className="contact-methods">
+      <div className="contact-method">
+        <div className="contact-icon">
+          <Mail size={24} />
+        </div>
+        <div className="contact-info">
+          <Title level={5}>Email</Title>
+          <a href="mailto:asddragonpine@gmail.com" className="contact-link">
+            asddragonpine@gmail.com
+          </a>
+        </div>
+      </div>
+      
+      <div className="contact-method">
+        <div className="contact-icon">
+          <MapPin size={24} />
+        </div>
+        <div className="contact-info">
+          <Title level={5}>Dove ci trovi</Title>
+          <a 
+            href="https://maps.app.goo.gl/g1QvNVtmRt3XP25V7" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="contact-link"
+          >
+            Lago di Serraia, Baselga di Piné
+          </a>
+        </div>
+      </div>
+      
+    
+    </div>
+    
+    <div className="contact-cta">
+      <Button 
+        type="primary" 
+        size="large"
+        icon={<Mail size={18} />}
+        className="join-button"
+        href="mailto:asddragonpine@gmail.com"
+      >
+        Scrivici ora
+      </Button>
+    </div>
+  </Card>
+</motion.div>
           </div>
         </motion.div>
       )}

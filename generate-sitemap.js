@@ -3,7 +3,7 @@ import fs from 'fs';
 
 (async () => {
   const hostname = 'https://asddragonpine.com'; // Aggiorna con il tuo dominio
-  const routes = ['/', '/event', '/aboutus']; // Aggiungi altre rotte se necessario
+  const routes = ['/', '/event', '/aboutus', '/gallery']; // Aggiungi altre rotte se necessario
 
   const sitemap = new SitemapStream({ hostname });
   

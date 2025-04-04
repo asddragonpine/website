@@ -93,17 +93,13 @@ const Home = () => {
         transition={{ duration: 1.2 }}
       >
         <Helmet>
-          <meta
-            name="google-site-verification"
-            content="3yxivH0zWGjRM3L-B9mVmPeW7C8oFRxWlubczgycmdQ"
-          />
           <title>
-            Asd Dragon Boat Piné - Dragonboat, Sport e Gare a Baselga di Piné,
+            Asd DragonBoat Piné - Dragonboat, Eventi e Sport a Baselga di Piné,
             Trento
           </title>
           <meta
             name="description"
-            content="Scopri Dragon Boat Piné: eventi sportivi, gare di dragon boat, festival e attività sportive a Baselga di Piné, Trento. Vivi la bellezza del Trentino attraverso sport e natura."
+            content="Scopri DragonBoat Piné: eventi sportivi, gare di dragon boat, festival e attività sportive a Baselga di Piné, Trento. Vivi la bellezza del Trentino attraverso sport e natura."
           />
           <meta
             name="keywords"
@@ -111,31 +107,49 @@ const Home = () => {
           />
           <meta name="author" content="Dragon Boat Piné" />
 
-          {/* Meta Tag Open Graph */}
           <meta
-            property="og:title"
-            content="Asd Dragon Boat Piné - Sport e Gare a Baselga di Piné"
+            name="google-site-verification"
+            content="3yxivH0zWGjRM3L-B9mVmPeW7C8oFRxWlubczgycmdQ"
           />
+
+          {/* Meta Tag Open Graph */}
+          <meta property="og:title" content="ASD Dragon Piné" />
           <meta
             property="og:description"
-            content="Partecipa al festival e alle gare di dragonboat a Baselga di Piné, Trento. Scopri eventi e attività sportive nel cuore del Trentino."
+            content="Scopri ASD Dragon Piné e partecipa ai nostri eventi sportivi!"
           />
-          <meta property="og:type" content="website" />
-          <meta property="og:url" content="https://asddragonpine.com" />
           <meta
             property="og:image"
             content="https://raw.githubusercontent.com/asddragonpine/website/main/dragon-asd.png"
           />
+          <meta property="og:image:type" content="image/png" />
+          <meta property="og:image:width" content="1200" />
+          <meta property="og:image:height" content="630" />
+          <meta property="og:url" content="https://www.asddragonpine.com" />
+          <meta property="og:type" content="website" />
           <meta
             property="og:image:alt"
             content="Logo ufficiale di ASD Dragon Pine"
           />
+          {/* Twitter Card (per Twitter/X) */}
+
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta name="twitter:title" content="ASD Dragon Piné" />
+          <meta
+            name="twitter:description"
+            content="Scopri ASD Dragon Piné e partecipa ai nostri eventi sportivi!"
+          />
+          <meta
+            name="twitter:image"
+            content="https://raw.githubusercontent.com/asddragonpine/website/main/dragon-asd.png"
+          />
+          {/* Dati strutturati in formato JSON-LD per il logo (Google) */}
           <script type="application/ld+json">
             {JSON.stringify({
               "@context": "https://schema.org",
               "@type": "SportsOrganization",
               name: "ASD Dragon Pine",
-              url: "https://asddragonpine.com",
+              url: "https://www.asddragonpine.com",
               logo: "https://raw.githubusercontent.com/asddragonpine/website/main/dragon-asd.png",
               description:
                 "ASD Dragon Pine è un'associazione sportiva dedicata alla promozione dello sport del DragonBoat a Baselga di Piné, Trento.",
