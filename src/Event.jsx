@@ -10,14 +10,14 @@ const Event = () => {
         description: "Festeggia con noi la festa dell'altopiano più attesa dell'anno!",
         date: "12/07/2025 - 13/07/2025",
         location: "Balsega di Piné",
-        image: "https://raw.githubusercontent.com/asddragonpine/website/main/dragonsprint.jpg", // Aggiungi immagine appropriata
+        image: "https://raw.githubusercontent.com/asddragonpine/website/main/dragonfestival.jpg", // Aggiungi immagine appropriata
       },
       {
         title: "DragoLases",
         description: "Festeggia con noi la festa di Lases più attesa dell'anno!",
         date: "21/06/2025",
         location: "Lases",
-        image: "https://raw.githubusercontent.com/asddragonpine/website/main/dragonlases.jpg", // Aggiungi immagine appropriata
+        image: "https://raw.githubusercontent.com/asddragonpine/website/main/dragolases.jpg", // Aggiungi immagine appropriata
       },
   ];
 
@@ -70,9 +70,9 @@ const Event = () => {
     {
         title: "Domeniche aperte a tutti",
         description: "Prova a pagaiare con noi ed immergiti nella natura.",
-        date: "13/07/2025 - 14/07/2025",
+        date: "Domeniche programmate",
         location: "Balsega di Piné",
-        image: "https://raw.githubusercontent.com/asddragonpine/website/main/dragon-festival.png", // Aggiungi immagine appropriata
+        image: "https://raw.githubusercontent.com/asddragonpine/website/main/opensunday.png", // Aggiungi immagine appropriata
       },
   ];
   return (
@@ -89,10 +89,10 @@ const Event = () => {
       <Typography.Title
         level={4}
         style={{
-          backgroundColor: "#47b4d0", // Sfondo azzurro
+          backgroundColor: "#990099", // Sfondo azzurro
           color: "white", // Colore del testo bianco
           padding: "15px", // Padding per dare spazio al testo
-          borderRadius: "5px", // Rende gli angoli arrotondati
+          borderRadius: "20px", // Rende gli angoli arrotondati
         }}
       >
         Feste
@@ -104,7 +104,7 @@ const Event = () => {
               title={festa.title}
               bordered={true} // Aggiunge il bordo
               style={{
-                borderRadius: "10px", // Rende gli angoli arrotondati
+                borderRadius: "20px", // Rende gli angoli arrotondati
                 boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
                 marginBottom: "20px", // Ombra per l'effetto 3D
               }}
@@ -132,7 +132,7 @@ const Event = () => {
           backgroundColor: "#f2460c", // Sfondo arancio
           color: "white", // Colore del testo bianco
           padding: "15px", // Padding per dare spazio al testo
-          borderRadius: "5px", // Rende gli angoli arrotondati
+          borderRadius: "20px", // Rende gli angoli arrotondati
         }}
       >
         Gare
@@ -144,7 +144,7 @@ const Event = () => {
               title={gara.title}
               bordered={true} // Aggiunge il bordo
               style={{
-                borderRadius: "10px", // Rende gli angoli arrotondati
+                borderRadius: "20px", // Rende gli angoli arrotondati
                 boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)", // Ombra per l'effetto 3D
               }}
               cover={<img alt={gara.title} src={gara.image} />} // Aggiungi l'immagine
@@ -169,7 +169,7 @@ const Event = () => {
           backgroundColor: "#67b538", // Sfondo arancio
           color: "white", // Colore del testo bianco
           padding: "15px", // Padding per dare spazio al testo
-          borderRadius: "5px", // Rende gli angoli arrotondati
+          borderRadius: "20px", // Rende gli angoli arrotondati
           marginTop: "15px",
         }}
       >
@@ -182,7 +182,7 @@ const Event = () => {
               title={eventi.title}
               bordered={true} // Aggiunge il bordo
               style={{
-                borderRadius: "10px", // Rende gli angoli arrotondati
+                borderRadius: "20px", // Rende gli angoli arrotondati
                 boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
                 marginBottom: "20px", // Ombra per l'effetto 3D
               }}

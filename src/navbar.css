@@ -1,11 +1,9 @@
-/* navbar.css */
+/* navbar.css
 
-/* Rimuove lo sfondo arancione dal menu selezionato */
 .ant-menu-dark .ant-menu-item-selected {
   background-color: transparent !important;
 }
 
-/* Aggiunge una linea arancione sotto il menu selezionato */
 .ant-menu-dark .ant-menu-item-selected::after {
   content: "" !important;
   position: absolute !important;
@@ -13,12 +11,11 @@
   left: 0 !important;
   right: 0 !important;
   height: 3px !important;
-  background: #ff6347 !important; /* Colore più brillante */
-  box-shadow: 0 0 10px rgba(255, 99, 71, 0.8) !important; /* Leggero effetto glow */
+  background: #ff6347 !important; 
+  box-shadow: 0 0 10px rgba(255, 99, 71, 0.8) !important;
   border-radius: 3px 3px 0 0 !important;
 }
 
-/* Effetto hover */
 .ant-menu-dark .ant-menu-item:hover::after {
   content: "" !important;
   position: absolute !important;
@@ -26,11 +23,10 @@
   left: 0 !important;
   right: 0 !important;
   height: 2px !important;
-  background: rgba(255, 78, 80, 0.5) !important; /* Versione più chiara per l'hover */
+  background: rgba(255, 78, 80, 0.5) !important; 
   border-radius: 3px 3px 0 0 !important;
 }
 
-/* Assicurati che i link siano ben visibili */
 .ant-menu-dark .ant-menu-item a {
   color: white !important;
   font-weight: 500 !important;
@@ -38,20 +34,92 @@
   transition: all 0.3s ease !important;
 }
 
-/* Effetto hover sui link */
 .ant-menu-dark .ant-menu-item:hover a {
   color: rgba(255, 255, 255, 0.9) !important;
 }
 
-/* Stile per il link selezionato */
 .ant-menu-dark .ant-menu-item-selected a {
-  color: #ff7e50 !important; /* Arancione più brillante */
+  color: #ff7e50 !important; 
   font-weight: 600 !important;
-  text-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5) !important; /* Aggiunge ombra per migliorare il contrasto */
+  text-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5) !important; 
+}
+
+.ant-menu-dark .ant-menu-item {
+  padding: 0 20px !important;
+  margin: 0 5px !important;
+  height: 50px !important;
+  display: flex !important;
+  align-items: center !important;
+  position: relative !important;
+} */
+
+/* Verifica che questi selettori siano corretti per la versione di Ant Design che stai usando */
+
+/* Rimuove lo sfondo dal menu selezionato */
+.ant-menu-dark .ant-menu-item-selected,
+.ant-menu-dark .ant-menu-item-active {
+  background-color: transparent !important;
+}
+
+/* Aggiunge una linea arancione sotto il menu selezionato */
+.ant-menu-dark .ant-menu-item-selected::after,
+.ant-menu-horizontal .ant-menu-item-selected::after {
+  content: "" !important;
+  position: absolute !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  height: 3px !important;
+  background: #ff6347 !important;
+  box-shadow: 0 0 10px rgba(255, 99, 71, 0.8) !important;
+  border-radius: 3px 3px 0 0 !important;
+}
+
+/* Effetto hover */
+.ant-menu-dark .ant-menu-item:hover::after,
+.ant-menu-horizontal .ant-menu-item:hover::after {
+  content: "" !important;
+  position: absolute !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  height: 2px !important;
+  background: rgba(255, 78, 80, 0.5) !important;
+  border-radius: 3px 3px 0 0 !important;
+}
+
+/* Stile per il link selezionato */
+.ant-menu-dark .ant-menu-item-selected a,
+.ant-menu-dark .ant-menu-item-selected span,
+.ant-menu-horizontal .ant-menu-item-selected a,
+.ant-menu-horizontal .ant-menu-item-selected span {
+  color: #ff7e50 !important;
+  font-weight: 600 !important;
+  text-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5) !important;
+}
+
+/* Effetto hover sui link
+.ant-menu-dark .ant-menu-item:hover a,
+.ant-menu-dark .ant-menu-item:hover span,
+.ant-menu-horizontal .ant-menu-item:hover a,
+.ant-menu-horizontal .ant-menu-item:hover span {
+  /* color: rgba(255, 255, 255, 0.9) !important; */
+} */
+
+/* Assicurati che i link siano ben visibili */
+.ant-menu-dark .ant-menu-item a,
+.ant-menu-dark .ant-menu-item span,
+.ant-menu-horizontal .ant-menu-item a,
+.ant-menu-horizontal .ant-menu-item span {
+  /* color: white !important; */
+  font-weight: 500 !important;
+  letter-spacing: 0.5px !important;
+  transition: all 0.3s ease !important;
 }
 
 /* Aggiusta lo spacing degli elementi del menu */
-.ant-menu-dark .ant-menu-item {
+.ant-menu-dark .ant-menu-item,
+.ant-menu-horizontal .ant-menu-item {
   padding: 0 20px !important;
   margin: 0 5px !important;
   height: 50px !important;
