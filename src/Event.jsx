@@ -10,14 +10,14 @@ const Event = () => {
         description: "Festeggia con noi la festa dell'altopiano più attesa dell'anno!",
         date: "12/07/2025 - 13/07/2025",
         location: "Balsega di Piné",
-        image: "https://raw.githubusercontent.com/asddragonpine/website/main/dragonfestival.jpg", // Aggiungi immagine appropriata
+        image: "https://raw.githubusercontent.com/asddragonpine/website/main/dragonfestival.png", // Aggiungi immagine appropriata
       },
       {
         title: "DragoLases",
         description: "Festeggia con noi la festa di Lases più attesa dell'anno!",
         date: "21/06/2025",
         location: "Lases",
-        image: "https://raw.githubusercontent.com/asddragonpine/website/main/dragolases.jpg", // Aggiungi immagine appropriata
+        image: "https://raw.githubusercontent.com/asddragonpine/website/main/dragolases.png", // Aggiungi immagine appropriata
       },
   ];
 
