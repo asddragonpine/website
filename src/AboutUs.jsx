@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { ArrowDown, Mail, MapPin } from "lucide-react";
-import { Typography, Row, Col, Card, Button } from "antd";
+import { ArrowDown, Mail, MapPin, Phone } from "lucide-react";
+import { Typography, Row, Col, Card, Button, Divider } from "antd";
 import "./AboutUs.css";
 import { InstagramOutlined } from "@ant-design/icons";
 
@@ -68,6 +68,34 @@ const AboutUs = () => {
     },
   };
 
+    // Dati delle squadre
+    const teams = [
+      {
+        name: "Dragon Piné",
+        description: "La nostra squadra di punta, ambiziosa e competitiva, con un palmarès che parla da sé: titoli territoriali, successi nazionali e partecipazioni internazionali. Ogni gara è una nuova sfida, ogni stagione un'occasione per migliorare e rappresentare l'Altopiano con orgoglio e determinazione.",
+        color: "#ff6b6b", // rosso tenue
+        logo: "https://raw.githubusercontent.com/asddragonpine/website/main/dragon-pine.png" 
+      },
+      {
+        name: "Piné Sharks",
+        description: "Un team giovane, esplosivo, pieno di energia. Gli Sharks mettono il divertimento al centro, senza rinunciare all'impegno. La loro forza? Il sorriso, la complicità e la voglia di crescere passo dopo passo, sempre insieme.",
+        color: "#74b9ff", // blu tenue
+        logo: "https://raw.githubusercontent.com/asddragonpine/website/main/dragon-shark.png"
+      },
+      {
+        name: "Dragon Flames",
+        description: "La nostra squadra femminile: grinta, eleganza e spirito di gruppo. Le Flames portano in acqua tutta la forza delle donne del dragonboat, dimostrando che determinazione e passione possono davvero fare la differenza.",
+        color: "#e877ed", // rosa tenue
+        logo: "https://raw.githubusercontent.com/asddragonpine/website/main/dragon-flames.png"
+      },
+      {
+        name: "Dragon Fly",
+        description: "La nostra squadra junior U16, composta da giovani atleti seri, concentrati e pronti a dare il massimo. Nonostante la giovane età, affrontano allenamenti e gare con grande maturità. Il futuro del dragonboat italiano... parte da qui.",
+        color: "#b2bec3", // grigio tenue
+        logo: "https://raw.githubusercontent.com/asddragonpine/website/main/dragon-junior.jpeg"
+      }
+    ];
+
   return (
     <div className="about-us">
       {/* Sezione video */}
@@ -117,7 +145,7 @@ const AboutUs = () => {
             style={{
               content: "''",
               position: "absolute",
-              top: -350,
+              top: -500,
               left: 0,
               right: 0,
               bottom: "90%",
@@ -150,12 +178,11 @@ const AboutUs = () => {
             >
               {" "}
               <Paragraph className="about-paragraph">
-                Il Dragon Boat è molto più di uno sport: è un'arte millenaria
-                che affonda le sue radici nella cultura cinese, dove le gare con
-                barche a forma di dragone si svolgono da oltre 2000 anni. Ogni
-                imbarcazione ospita fino a 22 persone - 20 pagaiatori, un
-                timoniere e un tamburino che detta il ritmo - uniti in perfetta
-                sincronia.
+              Siamo l’A.S.D. Dragon Piné: un’associazione sportiva nata dalla voglia di unire le persone
+              attraverso la forza dello sport, immersi in uno dei luoghi più suggestivi del Trentino, l’Altopiano di
+              Piné.
+              Il nostro cuore batte al ritmo delle pagaiate, sulle acque cristalline del Lago della Serraia, dove
+              natura, passione e spirito di squadra si incontrano per creare qualcosa di unico.
               </Paragraph>
             </motion.div>
           </div>
@@ -179,26 +206,10 @@ const AboutUs = () => {
               transition={{ duration: 1, delay: 1 }}
             >
               <Paragraph className="about-paragraph">
-                A Dragon Pine crediamo che il Dragon Boat rappresenti l'essenza
-                stessa del lavoro di squadra. La nostra missione è promuovere
-                uno sport che insegna valori fondamentali: coordinazione, ritmo,
-                resistenza e soprattutto spirito di squadra. Quando 20 persone
-                pagaiano insieme, è la perfetta sincronia a fare la differenza,
-                non la forza individuale.
-              </Paragraph>
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 1, delay: 1 }}
-            >
-              <Paragraph className="about-paragraph">
-                Ci impegniamo a diffondere questa disciplina sia come attività
-                sportiva che come esperienza formativa. Accogliamo atleti di
-                ogni età e livello, dalle famiglie ai gruppi aziendali, dai
-                giovani agli adulti, offrendo a tutti l'opportunità di scoprire
-                la magia di muoversi all'unisono sull'acqua.
+              Promuoviamo il dragonboat, uno sport di squadra spettacolare, accessibile e coinvolgente, capace
+              di far crescere legami veri, dentro e fuori dalla barca. Siamo partiti in pochi, ma oggi siamo una
+              grande famiglia di atleti, allenatori, volontari e sostenitori che credono in un progetto sportivo che
+              mette le persone al centro.
               </Paragraph>
             </motion.div>
           </div>
@@ -214,58 +225,87 @@ const AboutUs = () => {
                 I Nostri Valori
               </Title>
             </motion.div>
-            <Row gutter={[24, 24]}>
-              <Col xs={24} md={8}>
-                <motion.div
+            <Row gutter={[24, 24]} style={{ display: 'flex', flexWrap: 'wrap' }}>
+            <Col xs={24} md={8} style={{ display: 'flex' }}>
+            <motion.div
                   initial={{ opacity: 0, y: 50 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 1, delay: 1 }}
                 >
-                  <Card className="value-card">
-                    <Title level={4}>Inclusività</Title>
+      <Card className="value-card" style={{ height: '100%' }}>
+      <Title level={4}>Inclusività</Title>
                     <Paragraph>
-                      Il nostro team è aperto a tutti, indipendentemente
-                      dall'età, dall'esperienza o dalla condizione fisica.
-                      Crediamo che il Dragon Boat sia uno sport universale che
-                      può essere praticato e apprezzato da chiunque.
+                    Il dragonboat è per tutti. Giovani, adulti, donne, uomini, principianti e atleti esperti: nella
+                    nostra associazione c’è spazio per chiunque voglia mettersi in gioco.
                     </Paragraph>
                   </Card>
                 </motion.div>
               </Col>
-              <Col xs={24} md={8}>
-                <motion.div
+              <Col xs={24} md={8} style={{ display: 'flex' }}>
+              <motion.div
                   initial={{ opacity: 0, y: 50 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 1, delay: 1 }}
                 >
-                  <Card className="value-card">
-                    <Title level={4}>Spirito di Squadra</Title>
+      <Card className="value-card" style={{ height: '100%' }}>
+      <Title level={4}>Spirito di Squadra</Title>
                     <Paragraph>
-                      Nel Dragon Boat, o si vince insieme o si perde insieme.
-                      Ogni membro dell'equipaggio è essenziale e contribuisce al
-                      successo collettivo. La sincronia perfetta è il nostro
-                      obiettivo in ogni pagaiata.
+                    In ogni momento, sia durante gli allenamenti che nella vita di tutti i giorni, lo spirito di
+                    squadra è ciò che ci rende più forti. Collaborazione, sostegno reciproco, rispetto e unione
+                    sono la nostra forza: è insieme che superiamo le difficoltà, ci motiviamo a vicenda e
+                    cresciano come gruppo.
                     </Paragraph>
                   </Card>
                 </motion.div>
               </Col>
-              <Col xs={24} md={8}>
-                <motion.div
+              <Col xs={24} md={8} style={{ display: 'flex' }}>
+              <motion.div
                   initial={{ opacity: 0, y: 50 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 1, delay: 1 }}
                 >
-                  <Card className="value-card">
-                    <Title level={4}>Connessione con la Natura</Title>
+      <Card className="value-card" style={{ height: '100%' }}>
+      <Title level={4}>Passione</Title>
                     <Paragraph>
-                      Pratichiamo il nostro sport immersi nella bellezza
-                      naturale del lago di Piné. Questo ci permette di
-                      sviluppare un profondo rispetto per l'ambiente e di
-                      promuovere pratiche sostenibili in tutte le nostre
-                      attività.
+                    Mettiamo il cuore in ogni cosa che facciamo: che sia una competizione internazionale o una
+                    giornata di allenamento sul lago, lo viviamo con entusiasmo e dedizione.
+                    </Paragraph>
+                  </Card>
+                </motion.div>
+              </Col>
+              <Col xs={24} md={8} style={{ display: 'flex' }}>
+              <motion.div
+                  initial={{ opacity: 0, y: 50 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 1, delay: 1 }}
+                >
+      <Card className="value-card" style={{ height: '100%' }}>
+      <Title level={4}>Territorio e natura</Title>
+                    <Paragraph>
+                    Viviamo in un posto meraviglioso, e vogliamo valorizzarlo. Il nostro legame con il lago, i
+                    boschi e le montagne dell’Altopiano di Piné è fortissimo. Rispettiamo la natura e ci
+                    impegniamo a far conoscere il territorio attraverso lo sport.
+                    </Paragraph>
+                  </Card>
+                </motion.div>
+              </Col>
+              <Col xs={24} md={8} style={{ display: 'flex' }}>
+              <motion.div
+                  initial={{ opacity: 0, y: 50 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 1, delay: 1 }}
+                >
+      <Card className="value-card" style={{ height: '100%' }}>
+      <Title level={4}>Crescita personale e collettiva</Title>
+                    <Paragraph>
+                    Ogni pagaiata è un passo avanti, non solo per il team, ma anche per la persona. Vogliamo
+                    che ogni atleta cresca come sportivo e come individuo, imparando a superare i propri limiti
+                    insieme agli altri.
                     </Paragraph>
                   </Card>
                 </motion.div>
@@ -281,7 +321,7 @@ const AboutUs = () => {
               transition={{ duration: 1, delay: 1 }}
             >
               <Title level={2} className="section-title">
-                Attività e Programmi
+              La nostra realtà
               </Title>
             </motion.div>
             <motion.div
@@ -291,33 +331,35 @@ const AboutUs = () => {
               transition={{ duration: 1, delay: 1 }}
             >
               <Paragraph className="about-paragraph">
-                Il nostro calendario è ricco di attività per ogni livello e
-                interesse:
+              La nostra offerta è pensata per coinvolgere atleti di ogni età e livello, con programmi adatti a chi
+              vuole gareggiare ad alti livelli ma anche a chi desidera semplicemente vivere un’esperienza nuova,
+              attiva e divertente.
               </Paragraph>
-            </motion.div>
+            
             <motion.ul variants={fadeInUp} className="activities-list">
               <li>
-                <strong>Allenamenti regolari</strong> per atleti di ogni livello
+                <strong>Allenamenti regolari</strong> per tutte le categorie
               </li>
               <li>
                 <strong>
-                  Competizioni regionali, nazionali, europee e mondiali
+                Partecipazione a gare regionali, nazionali e internazionali
                 </strong>{" "}
-                dove mettiamo alla prova le nostre abilità
               </li>
               <li>
-                <strong>Team building aziendale</strong>, un'esperienza unica
+                <strong>Eventi di promozione e open day aperti a tutti</strong>
+              </li>
+              <li>
+                <strong>Attività di avvicinamento </strong>, per scuole e gruppi
+              </li>
+              <li>
+                <strong>Esperienze di team building per aziende e associazioni</strong>, un'esperienza unica
                 per rafforzare lo spirito di gruppo
               </li>
               <li>
-                <strong>Corsi per bambini e ragazzi</strong>, per avvicinare le
-                nuove generazioni a questo sport
-              </li>
-              <li>
-                <strong>Festival estivi e dimostrazioni</strong> per promuovere
-                il Dragon Boat nella comunità
+                <strong>Eventi sul territorio</strong>, come il Dragonfestival e la Dragolases
               </li>
             </motion.ul>
+            </motion.div>
           </div>
 
           <div className="about-section">
@@ -328,35 +370,49 @@ const AboutUs = () => {
               transition={{ duration: 1, delay: 1 }}
             >
               <Title level={2} className="section-title">
-                Il Nostro Team
+              Le Nostre Squadre
               </Title>
             </motion.div>
-            <motion.div
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 1, delay: 1 }}
-            >
-              <Paragraph className="about-paragraph">
-                ASD Dragon Pine è composta da un gruppo eterogeneo di
-                appassionati, uniti dall'amore per questo sport. Dai nostri
-                coach esperti ai nuovi membri, ognuno porta energia, entusiasmo
-                e un contributo unico alla nostra comunità.
-              </Paragraph>
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 1, delay: 1 }}
-            >
-              <Paragraph className="about-paragraph">
-                La nostra squadra agonistica partecipa regolarmente a
-                competizioni in tutta Italia e occasionalmente all'estero,
-                rappresentando con orgoglio il Trentino e la nostra tradizione
-                sportiva.
-              </Paragraph>
-            </motion.div>
+            <Row gutter={[24, 24]} style={{ display: 'flex', flexWrap: 'wrap' }}>
+            {teams.map((team, index) => (
+              <Col xs={24} md={12} key={index} style={{ display: 'flex' }}>
+                <motion.div
+                  initial={{ opacity: 0, y: 50 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 1, delay: 0.2 * index }}
+                  style={{ width: '100%' }}
+                >
+                  <Card 
+                    className="team-card"
+                    style={{ 
+                      backgroundColor: 'white',
+                      borderColor: team.color,
+                      boxShadow: `0 10px 10px rgba(0,0,0,0.1)`,
+                      borderWidth: '5px',
+                      height: '100%'
+                    }}
+                  >
+                    <div style={{ display: 'flex', alignItems: 'center', marginBottom: '16px' }}>
+                      <div style={{ flexShrink: 0, marginRight: '16px' }}>
+                        <img 
+                          src={team.logo} 
+                          alt={`Logo ${team.name}`} 
+                          style={{ width: '60px', height: '60px', objectFit: 'contain' }}
+                        />
+                      </div>
+                      <Title level={3} style={{ margin: 0, color: team.color }}>
+                        {team.name}
+                      </Title>
+                    </div>
+                    <Paragraph style={{ fontSize: '16px', flex: '1 1 auto' }}>
+                      {team.description}
+                    </Paragraph>
+                  </Card>
+                </motion.div>
+              </Col>
+            ))}
+          </Row>
           </div>
 
           <div className="about-section">
@@ -377,10 +433,10 @@ const AboutUs = () => {
               transition={{ duration: 1, delay: 1 }}
             >
               <Paragraph className="about-paragraph">
-                Se sei curioso di provare il Dragon Boat, o semplicemente
-                desideri saperne di più, ti invitiamo a contattarci. Offriamo
-                lezioni di prova gratuite e accogliamo con entusiasmo nuovi
-                membri nella nostra famiglia Dragon Pine.
+              Che tu sia un atleta, uno studente, o semplicemente una persona curiosa, all’A.S.D. Dragon Piné c’è
+              un posto per te.<br/>
+              <strong>Vieni a scoprire la magia del Dragonboat</strong>, a vivere lo sport come non l’hai mai fatto: nella natura,
+              tra persone vere, al ritmo di un cuore che batte forte...
               </Paragraph>
             </motion.div>
             <motion.div
@@ -389,72 +445,83 @@ const AboutUs = () => {
               viewport={{ once: true }}
               transition={{ duration: 1, delay: 1 }}
             >
-              <Paragraph className="about-paragraph">
-                Non è necessaria alcuna esperienza precedente - solo la voglia
-                di mettersi in gioco e scoprire la gioia di pagaiare insieme!
-              </Paragraph>
+             
             </motion.div>
             
 
-
+{/* Modifica nella card dei contatti in AboutUs.jsx */}
             <motion.div 
-  variants={fadeInUp} 
-  initial="hidden" 
-  animate="visible"
-  className="contact-card-container"
->
-  <Card className="contact-card">
-    <div className="contact-card-header">
-      <Title level={3}>Contattaci</Title>
-      <div className="contact-divider"></div>
-    </div>
-    
-    <div className="contact-methods">
-      <div className="contact-method">
-        <div className="contact-icon">
-          <Mail size={24} />
-        </div>
-        <div className="contact-info">
-          <Title level={5}>Email</Title>
-          <a href="mailto:asddragonpine@gmail.com" className="contact-link">
-            asddragonpine@gmail.com
-          </a>
-        </div>
-      </div>
-      
-      <div className="contact-method">
-        <div className="contact-icon">
-          <MapPin size={24} />
-        </div>
-        <div className="contact-info">
-          <Title level={5}>Dove ci trovi</Title>
-          <a 
-            href="https://maps.app.goo.gl/g1QvNVtmRt3XP25V7" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="contact-link"
-          >
-            Lago di Serraia, Baselga di Piné
-          </a>
-        </div>
-      </div>
-      
-    
-    </div>
-    
-    <div className="contact-cta">
-      <Button 
-        type="primary" 
-        size="large"
-        icon={<Mail size={18} />}
-        className="join-button"
-        href="mailto:asddragonpine@gmail.com"
-      >
-        Scrivici ora
-      </Button>
-    </div>
-  </Card>
-</motion.div>
+ 
+     
+                variants={fadeInUp} 
+                initial="hidden" 
+                animate="visible"
+                className="contact-card-container"
+              >
+                <Card className="contact-card">
+                  <div className="contact-card-header">
+                    <Title level={3}>Contattaci</Title>
+                    <div className="contact-divider"></div>
+                  </div>
+                  <div className="contact-cta">
+                    <Button 
+                      type="primary" 
+                      size="large"
+                      icon={<Mail size={18} />}
+                      className="join-button"
+                      href="mailto:asddragonpine@gmail.com"
+                    >
+                      Scrivici ora
+                    </Button>
+                  </div>
+                  <div className="contact-methods">
+                    <div className="contact-method">
+                      <div className="contact-icon">
+                        <Mail size={24} />
+                      </div>
+                      <div className="contact-info">
+                        <Title level={5}>Email</Title>
+                        <a href="mailto:asddragonpine@gmail.com" className="contact-link">
+                          asddragonpine@gmail.com
+                        </a>
+                        <div className="contact-secondary">
+                          <a href="mailto:associazione@pec.dragonpine.it" className="contact-link">
+                            associazione@pec.dragonpine.it (PEC)
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    
+                   
+                    
+                    <div className="contact-method">
+                      <div className="contact-icon">
+                        <Phone size={24} />
+                      </div>
+                      <div className="contact-info">
+                        <Title level={5}>Telefono</Title>
+                        <a href="tel:+393311540763" className="contact-link">
+                          +39 331 154 0763 (Daniel Casagranda)
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  {/* Aggiungi le informazioni legali */}
+                  <div className="legal-info">
+                    <Title level={5} className="legal-title">Informazioni Legali</Title>
+                    <Divider style={{ margin: '12px 0' }} />
+                    <div className="legal-details">
+                      <p><strong>Denominazione:</strong> DRAGON PINÈ ASSOCIAZIONE SPORTIVA DILETTANTISTICA</p>
+                      <p><strong>P.Iva:</strong> 02420980225</p>
+                      <p><strong>Cod Fiscale:</strong> 02420980225</p>
+                      <p><strong>Indirizzo:</strong> Via C. Battisti 50, 38042 Baselga di Pinè (TN), IT</p>
+                    </div>
+                  </div>
+                  
+                 
+                </Card>
+              </motion.div>
           </div>
         </motion.div>
       )}

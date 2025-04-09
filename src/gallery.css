@@ -1,7 +1,7 @@
 /* Sfondo minimalista con leggero gradiente */
 .drive-container {
-    background: linear-gradient(120deg, #ecebeb, #e2e5e9);
-    min-height: 100vh;
+    background: linear-gradient(180deg, #ffffff, #b8b9b9);
+    min-height: 62vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -76,3 +76,75 @@
     margin: 20px 0;
     margin-top: 50px;
   }
+
+  /* Aggiungi questi stili mantenendo quelli esistenti per drive-container, ecc. */
+
+/* Stili per la sezione hero */
+.gallery-page {
+  width: 100%;
+}
+
+.gallery-hero {
+  position: relative;
+  height: 300px;
+  background: linear-gradient(135deg, #2c599d, #1a3763);
+  color: rgb(255, 255, 255);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 0px;
+}
+
+.gallery-hero::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  height: 70px;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 1440 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0,50 C300,100 600,0 1440,80 L1440,100 L0,100 Z' fill='%23ffffff'/%3E%3C/svg%3E");
+  background-size: cover;
+  background-position: center;
+}
+
+.gallery-hero-content {
+  position: relative;
+  z-index: 1;
+  padding: 0 20px;
+}
+
+.gallery-hero-content h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.gallery-hero-content p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Stili responsivi per la hero section */
+@media (max-width: 768px) {
+  .gallery-hero {
+    height: 250px;
+  }
+  
+  .gallery-hero-content h1 {
+    font-size: 2.2rem;
+  }
+  
+  .gallery-hero-content p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery-hero-content h1 {
+    font-size: 1.8rem;
+  }
+}

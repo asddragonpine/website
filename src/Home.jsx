@@ -439,8 +439,11 @@ const Home = () => {
                 }}
               >
                 <p>
-                  Siamo un Team appassionato di DragonBoat, uniti dalla passione
-                  e dalla voglia di divertirci
+                Siamo l’A.S.D. Dragon Piné, un’associazione sportiva nata sull’Altopiano di Piné, uno dei luoghi
+                più suggestivi del Trentino. Qui, tra laghi cristallini e panorami mozzafiato, abbiamo trovato la
+                cornice perfetta per vivere la nostra passione: il dragonboat! Siamo un gruppo affiatato di persone
+                che ama lo sport, la natura e soprattutto lo spirito di squadra. Che tu voglia metterti alla prova,
+                divertirti o semplicemente provare qualcosa di nuovo, sali in barca con noi!
                 </p>
               </Card>
             </motion.div>
