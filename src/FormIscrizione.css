@@ -1,0 +1,126 @@
+/* CSS per il form con Material UI */
+
+.form-container {
+    padding: 40px 16px !important;
+    margin: 0 auto !important;
+  }
+  
+  .form-paper {
+    padding: 32px 24px !important;
+    border-radius: 16px !important;
+  }
+  
+  /* Titolo del form */
+  .form-title {
+    text-align: center !important;
+    margin-bottom: 32px !important;
+    color: #f2460c !important;
+    font-weight: 700 !important;
+    position: relative !important;
+    padding-bottom: 8px !important;
+  }
+  
+  .form-title::after {
+    content: '' !important;
+    position: absolute !important;
+    width: 100px !important;
+    height: 3px !important;
+    background-color: #f2460c !important;
+    bottom: 0 !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+  }
+  
+  /* Titoli sezioni */
+  .section-title {
+    color: #f2460c !important;
+    font-weight: 500 !important;
+    margin-bottom: 24px !important;
+    position: relative !important;
+    padding-bottom: 8px !important;
+    border-bottom: 2px solid #f2460c !important;
+    display: inline-block !important;
+  }
+  
+  /* Sezioni del form */
+  .form-section {
+    margin-bottom: 24px !important;
+  }
+  
+  /* Pulsante di invio */
+  .submit-button {
+    padding: 10px 36px !important;
+    font-size: 16px !important;
+    background-color: #f2460c !important;
+    text-transform: none !important;
+    border-radius: 8px !important;
+  }
+  
+  .submit-button:hover {
+    background-color: #d93c06 !important;
+  }
+  
+  /* Schermata di successo */
+  .success-paper {
+    padding: 48px 32px !important;
+    border-radius: 16px !important;
+    text-align: center !important;
+  }
+  
+  .success-content {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+  
+  .success-icon {
+    width: 80px !important;
+    height: 80px !important;
+    border-radius: 50% !important;
+    background-color: #e8f5e9 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin-bottom: 24px !important;
+  }
+  
+  .success-title {
+    color: #2e7d32 !important;
+    margin-bottom: 16px !important;
+    font-weight: 700 !important;
+  }
+  
+  .success-message {
+    margin-bottom: 32px !important;
+    color: #555 !important;
+  }
+  
+  .success-button {
+    background-color: #f2460c !important;
+    padding: 10px 36px !important;
+    text-transform: none !important;
+    font-size: 16px !important;
+    font-weight: 500 !important;
+    border-radius: 8px !important;
+  }
+  
+  .success-button:hover {
+    background-color: #d93c06 !important;
+  }
+  
+  /* Media Query */
+  @media (max-width: 768px) {
+    .form-paper {
+      padding: 24px 16px !important;
+    }
+    
+    .form-title {
+      font-size: 1.5rem !important;
+    }
+    
+    .section-title {
+      font-size: 1.2rem !important;
+    }
+    
+    /* Nessuna necessità di width: 100% perché già impostato nel JSX */
+  }

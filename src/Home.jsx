@@ -12,6 +12,7 @@ import { LinkOutlined } from "@ant-design/icons";
 import { InstagramOutlined, CalendarOutlined } from "@ant-design/icons";
 import { useMediaQuery } from "react-responsive";
 import { Helmet } from "react-helmet";
+import "./index.css";
 
 import {
   Layout,
@@ -474,18 +475,17 @@ const Home = () => {
                 Vuoi unirti a noi?
               </Text>
               <div style={{ textAlign: "center", marginTop: "24px" }}>
-                <Button
+              <Button
                   type="primary"
                   icon={<LinkOutlined />}
                   size="large"
-                  href={driveFolderLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  // Modifica qui: per HashRouter usa "#/iscrizione" invece di "/iscrizione"
+                  onClick={() => window.location.href = '#/iscrizione'}
                   className="home-button"
                   style={{ borderRadius: "30px" }}
                 >
                   Compila il modulo
-                </Button>
+            </Button>
               </div>
             </Card>
           </div>

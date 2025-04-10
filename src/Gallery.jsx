@@ -2,7 +2,6 @@ import { Container, Title, Text, Button, Card, Center, Divider } from "@mantine/
 import { LinkOutlined } from "@ant-design/icons";
 import "/src/gallery.css"; // Import del file CSS
 import { motion } from "framer-motion";
-
 const driveFolderLink = "https://drive.google.com/drive/folders/1F4xudRaM626AhCEacPAccGzUittKQOXy";
 
 const Gallery = () => {
