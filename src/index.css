@@ -246,8 +246,9 @@ body {
 
 /* Effetto hover elegante */
 .home-button:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 6px 16px rgba(255, 78, 80, 0.6);
+  background: #b23d3f !important;
+  transform: translateY(-3px) !important;
+  box-shadow: 0 6px 16px rgba(255, 78, 80, 0.6) !important;
 }
 
 
