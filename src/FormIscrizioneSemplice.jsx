@@ -2577,7 +2577,8 @@ const FormIscrizioneSemplice = () => {
     squadra: '',
     tipoIscrizione: '',
     dataScadenzaVisita: null,
-    accettoPrivacy: false
+    accettoPrivacy: false,
+    mondiali: false
   });
 
   // Stato per gli errori nel form
@@ -2759,7 +2760,7 @@ const FormIscrizioneSemplice = () => {
         maxSizeMB: 0.5, // Massimo 0.5MB
         maxWidthOrHeight: 1600,
         useWebWorker: true,
-        initialQuality: 0.7,
+        initialQuality: 0.8,
         fileType: 'image/jpeg' // Converti tutto in JPG
       };
       
@@ -3341,7 +3342,8 @@ const FormIscrizioneSemplice = () => {
           squadra: '',
           tipoIscrizione: '',
           dataScadenzaVisita: null,
-          accettoPrivacy: false
+          accettoPrivacy: false,
+          mondiali: false
         });
         
         setFiles({
@@ -4006,6 +4008,22 @@ const FormIscrizioneSemplice = () => {
                   <FormHelperText error>{formErrors.accettoPrivacy}</FormHelperText>
                 )}
               </FormGroup>
+
+              <FormGroup>
+                <FormControlLabel
+                  control={
+                    <Checkbox
+                      name="mondiali"
+                      checked={formData.mondiali}
+                      onChange={handleChange}
+                      color="primary"
+                    />
+                  }
+                  label="Desidero iscrivermi alla squadra per Europei/Mondiali"
+                />
+               
+              </FormGroup>  
+
             </Stack>
           </Box>
           
