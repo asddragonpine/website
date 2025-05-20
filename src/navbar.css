@@ -1,69 +1,18 @@
-/* navbar.css
+/* navbar.css */
 
-.ant-menu-dark .ant-menu-item-selected {
+/* Rimuove lo sfondo dal menu selezionato - versione aggiornata */
+.ant-menu-dark li.ant-menu-item-selected,
+.ant-menu-dark li.ant-menu-item-active,
+.ant-menu-dark .ant-menu-submenu-selected,
+li.ant-menu-item-selected,
+li.ant-menu-item-active {
   background-color: transparent !important;
 }
 
-.ant-menu-dark .ant-menu-item-selected::after {
-  content: "" !important;
-  position: absolute !important;
-  bottom: 0 !important;
-  left: 0 !important;
-  right: 0 !important;
-  height: 3px !important;
-  background: #ff6347 !important; 
-  box-shadow: 0 0 10px rgba(255, 99, 71, 0.8) !important;
-  border-radius: 3px 3px 0 0 !important;
-}
-
-.ant-menu-dark .ant-menu-item:hover::after {
-  content: "" !important;
-  position: absolute !important;
-  bottom: 0 !important;
-  left: 0 !important;
-  right: 0 !important;
-  height: 2px !important;
-  background: rgba(255, 78, 80, 0.5) !important; 
-  border-radius: 3px 3px 0 0 !important;
-}
-
-.ant-menu-dark .ant-menu-item a {
-  color: white !important;
-  font-weight: 500 !important;
-  letter-spacing: 0.5px !important;
-  transition: all 0.3s ease !important;
-}
-
-.ant-menu-dark .ant-menu-item:hover a {
-  color: rgba(255, 255, 255, 0.9) !important;
-}
-
-.ant-menu-dark .ant-menu-item-selected a {
-  color: #ff7e50 !important; 
-  font-weight: 600 !important;
-  text-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5) !important; 
-}
-
-.ant-menu-dark .ant-menu-item {
-  padding: 0 20px !important;
-  margin: 0 5px !important;
-  height: 50px !important;
-  display: flex !important;
-  align-items: center !important;
-  position: relative !important;
-} */
-
-/* Verifica che questi selettori siano corretti per la versione di Ant Design che stai usando */
-
-/* Rimuove lo sfondo dal menu selezionato */
-.ant-menu-dark .ant-menu-item-selected,
-.ant-menu-dark .ant-menu-item-active {
-  background-color: transparent !important;
-}
-
-/* Aggiunge una linea arancione sotto il menu selezionato */
-.ant-menu-dark .ant-menu-item-selected::after,
-.ant-menu-horizontal .ant-menu-item-selected::after {
+/* Gestisce la linea arancione sotto il menu selezionato - desktop */
+.ant-menu-dark li.ant-menu-item-selected::after,
+.ant-menu-horizontal li.ant-menu-item-selected::after,
+li.ant-menu-item-selected::after {
   content: "" !important;
   position: absolute !important;
   bottom: 0 !important;
@@ -76,8 +25,9 @@
 }
 
 /* Effetto hover */
-.ant-menu-dark .ant-menu-item:hover::after,
-.ant-menu-horizontal .ant-menu-item:hover::after {
+.ant-menu-dark li.ant-menu-item:hover::after,
+.ant-menu-horizontal li.ant-menu-item:hover::after,
+li.ant-menu-item:hover::after {
   content: "" !important;
   position: absolute !important;
   bottom: 0 !important;
@@ -89,41 +39,111 @@
 }
 
 /* Stile per il link selezionato */
-.ant-menu-dark .ant-menu-item-selected a,
-.ant-menu-dark .ant-menu-item-selected span,
-.ant-menu-horizontal .ant-menu-item-selected a,
-.ant-menu-horizontal .ant-menu-item-selected span {
+.ant-menu-dark li.ant-menu-item-selected a,
+.ant-menu-dark li.ant-menu-item-selected span,
+.ant-menu-horizontal li.ant-menu-item-selected a,
+.ant-menu-horizontal li.ant-menu-item-selected span,
+li.ant-menu-item-selected a,
+li.ant-menu-item-selected span {
   color: #ff7e50 !important;
   font-weight: 600 !important;
   text-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5) !important;
 }
 
-/* Effetto hover sui link
-.ant-menu-dark .ant-menu-item:hover a,
-.ant-menu-dark .ant-menu-item:hover span,
-.ant-menu-horizontal .ant-menu-item:hover a,
-.ant-menu-horizontal .ant-menu-item:hover span {
-  /* color: rgba(255, 255, 255, 0.9) !important; */
-/*} */
+/* Effetto hover sui link */
+.ant-menu-dark li.ant-menu-item:hover a,
+.ant-menu-dark li.ant-menu-item:hover span,
+.ant-menu-horizontal li.ant-menu-item:hover a,
+.ant-menu-horizontal li.ant-menu-item:hover span,
+li.ant-menu-item:hover a,
+li.ant-menu-item:hover span {
+  color: rgba(255, 255, 255, 0.9) !important;
+}
 
-/* Assicurati che i link siano ben visibili */
-.ant-menu-dark .ant-menu-item a,
-.ant-menu-dark .ant-menu-item span,
-.ant-menu-horizontal .ant-menu-item a,
-.ant-menu-horizontal .ant-menu-item span {
-  /* color: white !important; */
+/* Stile per i link normali */
+.ant-menu-dark li.ant-menu-item a,
+.ant-menu-dark li.ant-menu-item span,
+.ant-menu-horizontal li.ant-menu-item a,
+.ant-menu-horizontal li.ant-menu-item span,
+li.ant-menu-item a,
+li.ant-menu-item span {
+  color: white !important;
   font-weight: 500 !important;
   letter-spacing: 0.5px !important;
   transition: all 0.3s ease !important;
 }
 
 /* Aggiusta lo spacing degli elementi del menu */
-.ant-menu-dark .ant-menu-item,
-.ant-menu-horizontal .ant-menu-item {
+.ant-menu-dark li.ant-menu-item,
+.ant-menu-horizontal li.ant-menu-item,
+li.ant-menu-item {
   padding: 0 20px !important;
   margin: 0 5px !important;
   height: 50px !important;
   display: flex !important;
   align-items: center !important;
   position: relative !important;
+}
+
+/* Stile specifico per il menu mobile */
+.ant-drawer .ant-menu-dark {
+  background-color: transparent !important;
+}
+
+.ant-drawer .ant-menu-dark li.ant-menu-item-selected {
+  background-color: rgba(255, 99, 71, 0.2) !important;
+}
+
+.ant-drawer .ant-menu-dark li.ant-menu-item-selected::after {
+  left: 0 !important;
+  right: unset !important;
+  height: 100% !important;
+  width: 3px !important;
+  bottom: unset !important;
+  top: 0 !important;
+  border-radius: 0 3px 3px 0 !important;
+}
+
+.ant-drawer .ant-menu-dark li.ant-menu-item:hover::after {
+  left: 0 !important;
+  right: unset !important;
+  height: 100% !important;
+  width: 2px !important;
+  bottom: unset !important;
+  top: 0 !important;
+  border-radius: 0 3px 3px 0 !important;
+}
+
+/* Imposta il colore arancione per i link nel menu mobile */
+.ant-drawer .ant-menu-dark li.ant-menu-item a,
+.ant-drawer .ant-menu-dark li.ant-menu-item span {
+  color: #ff6347 !important;
+}
+
+/* Assicurati che il drawer sia semi-trasparente */
+.ant-drawer .ant-drawer-content-wrapper .ant-drawer-content {
+  background-color: rgba(0, 0, 0, 0.7) !important;
+  backdrop-filter: blur(10px) !important;
+  -webkit-backdrop-filter: blur(10px) !important;
+}
+
+.ant-drawer .ant-drawer-header {
+  background-color: rgba(0, 0, 0, 0.85) !important;
+  backdrop-filter: blur(10px) !important;
+  -webkit-backdrop-filter: blur(10px) !important;
+  border-bottom: 1px solid #ff6347 !important;
+}
+
+.ant-drawer .ant-drawer-title {
+  color: #ff6347 !important;
+  font-weight: bold !important;
+}
+
+.ant-drawer .ant-drawer-close {
+  color: #ff6347 !important;
+}
+
+/* Stile generale di sfocatura per il layout mobile */
+.ant-menu.ant-menu-root.ant-menu-inline.ant-menu-dark {
+  background-color: transparent !important;
 }

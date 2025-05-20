@@ -4,6 +4,7 @@ import ReactDOM from "react-dom/client";
 import React from "react";
 import { MantineProvider } from "@mantine/core"; // Importa MantineProvider
 import { Notifications } from '@mantine/notifications';
+import { AuthProvider } from './context/AuthContext'; // Importa AuthProvider
 
 
 import "antd/dist/reset.css"; // Importa il CSS di Ant Design
@@ -12,12 +13,14 @@ import "antd/dist/reset.css"; // Importa il CSS di Ant Design
 import App from "./App";
 import Home from "./Home.jsx";
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <React.StrictMode>
+    <React.StrictMode>
     <HashRouter>
-    <MantineProvider theme={{ colorScheme: "light" }}>
-    <Notifications position="top-right" zIndex={2077} />
-        <App />
-      </MantineProvider>
-      </HashRouter>
-      </React.StrictMode>
+      <AuthProvider> {/* Aggiungi AuthProvider */}
+        <MantineProvider theme={{ colorScheme: "light" }}>
+          <Notifications position="top-right" zIndex={2077} />
+          <App />
+        </MantineProvider>
+      </AuthProvider>
+    </HashRouter>
+  </React.StrictMode>
 );
