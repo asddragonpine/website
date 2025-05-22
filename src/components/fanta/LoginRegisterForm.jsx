@@ -11,7 +11,8 @@ import {
   CircularProgress,
   Tabs,
   Tab,
-  Grid
+  Grid, 
+  Link
 } from '@mui/material';
 import { supabase } from '../../supabaseClient';
 import { debounce } from 'lodash'; // Assicurati di installare lodash: npm install lodash
@@ -59,7 +60,7 @@ const LoginRegisterForm = ({ onSuccess }) => {
       const { data, error } = await supabase
         .from('utenti')
         .select('username')
-        .eq('username', usernameToCheck)
+        .ilike('username', usernameToCheck)
         .maybeSingle();
 
       if (error) {
@@ -309,6 +310,18 @@ const handleRegister = async (e) => {
                   </Button>
                 </Typography>
               </Box>
+               <Typography
+                  variant="body2"
+                  gutterBottom
+                  align="center"
+                  color="text.secondary"
+                  sx={{ whiteSpace: 'pre-line' }}
+                >
+                  {`Per problemi di accesso contatta:\n`}
+                  <Link href="mailto:svaldisvaldisvaldi@gmail.com">
+                    QUESTO INDIRIZZO
+                  </Link>
+                </Typography>
             </Box>
           )}
         </Box>
@@ -425,6 +438,18 @@ const handleRegister = async (e) => {
                   </Button>
                 </Typography>
               </Box>
+               <Typography
+                  variant="body2"
+                  gutterBottom
+                  align="center"
+                  color="text.secondary"
+                  sx={{ whiteSpace: 'pre-line' }}
+                >
+                  {`Per problemi di accesso contatta:\n`}
+                  <Link href="mailto:svaldisvaldisvaldi@gmail.com">
+                    QUESTO INDIRIZZO
+                  </Link>
+                </Typography>
             </Box>
           )}
         </Box>
