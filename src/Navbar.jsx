@@ -50,10 +50,10 @@ const Navbar = () => {
       key: '/gallery',
       label: <Link to="/gallery">Gallery</Link>,
     },
-    // {
-    //   key: '/fantadragonboat',
-    //   label: <Link to="/fantadragonboat">FantaDragonBoat</Link>,
-    // },
+    {
+      key: '/fantadragonboat',
+      label: <Link to="/fantadragonboat">FantaDragonBoat</Link>,
+    },
   ];
 
   const showDrawer = () => {

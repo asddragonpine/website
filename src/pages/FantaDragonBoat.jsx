@@ -284,7 +284,8 @@ const FantaDragonBoat = () => {
                     • 7 punti se una squadra è a ±1 posizione<br />
                     • 5 punti se una squadra è a ±2 posizioni<br />
                     • 3 punti se una squadra è a ±3 posizioni<br />
-                    • +10 punti se indovini il miglior tempo
+                    • 0 punti per altre posizioni<br />
+                    • +10 punti BONUS se indovini il miglior tempo
                   </Box>
                 </CardContent>
               </Card>
