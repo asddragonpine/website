@@ -211,9 +211,19 @@ const FantaDragonBoat = () => {
         mb: 2,
         flexWrap: 'wrap'
       }}>
-        <Typography variant="h4" component="h1" gutterBottom>
-          FantaDragonBoat
-        </Typography>
+        <Box 
+        component="img"
+        src="https://raw.githubusercontent.com/asddragonpine/website/main/fantadragonboat.png" // Assicurati che il percorso sia corretto
+        alt="FantaDragonBoat Logo"
+        sx={{ 
+          height: { xs: '130px', sm: '190px', md: '250px' }, // Altezza responsiva
+          width: 'auto', // Mantiene l'aspect ratio
+          maxWidth: { xs: '400px', sm: '500px', md: '600px' }, // Larghezza massima responsiva
+          mr: 2, // Margine a destra
+          objectFit: 'contain' // Assicura che l'immagine si adatti bene
+          
+        }}
+      />
         
         <Button
           variant="outlined"
