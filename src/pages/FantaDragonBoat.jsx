@@ -213,8 +213,8 @@ const FantaDragonBoat = () => {
       }}>
         <Box 
         component="img"
-        src="https://raw.githubusercontent.com/asddragonpine/website/main/fantadragonboat.png" // Assicurati che il percorso sia corretto
-        alt="FantaDragonBoat Logo"
+        src="/fantadragonboat.PNG"
+          alt="FantaDragonBoat Logo"
         sx={{ 
           height: { xs: '130px', sm: '190px', md: '250px' }, // Altezza responsiva
           width: 'auto', // Mantiene l'aspect ratio
