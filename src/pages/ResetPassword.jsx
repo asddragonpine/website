@@ -153,8 +153,12 @@ export default function ResetPassword() {
     }
     
     setLoading(true);
-    const { error } = await supabase.auth.resetPasswordForEmail(email);
-
+    // Imposta il redirectTo corretto in base all'ambiente
+    const redirectUrl = 'https://www.asddragonpine.com/#/reset-password';
+    
+    const { error } = await supabase.auth.resetPasswordForEmail(email, {
+      redirectTo: redirectUrl,
+    });
 
     if (error) {
       setStatus({ 
