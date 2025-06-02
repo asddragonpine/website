@@ -17,6 +17,7 @@ import FormIscrizioneSemplice from "./FormIscrizioneSemplice"; // Importa il com
 import DashboardSemplice from "./DashboardSemplice"; // Importa il componente dashboard
 import FantaDragonBoat from './pages/FantaDragonBoat';
 import { AuthProvider } from './context/AuthContext'; // Importa l'AuthProvider
+import ResetPassword from './pages/ResetPassword';
 
 // Componente per proteggere la dashboard con password
 const ProtectedDashboard = () => {
@@ -145,6 +146,10 @@ const App = () => {
             </ErrorBoundaryWrapper>
           } />
           
+           {/* Rotta per il reset della password */}
+          <Route path="/reset-password" element={<ResetPassword />} />
+  
+
           {/* Nuovo percorso per il form di iscrizione */}
           <Route path="/iscrizione" element={<FormIscrizioneSemplice />} />
           

@@ -1474,7 +1474,7 @@ const ResultForm = () => {
                     <TableHead>
                       <TableRow>
                         <TableCell>Utente</TableCell>
-                        <TableCell>Email</TableCell>
+                        {/* <TableCell>Email</TableCell> */}
                         <TableCell align="center">Admin</TableCell>
                         <TableCell>Pronostici</TableCell>
                       </TableRow>
@@ -1499,10 +1499,13 @@ const ResultForm = () => {
                                 <Typography variant="body2" color="text.secondary">
                                   {utente.nome} {utente.cognome}
                                 </Typography>
+                                <Typography variant="body2" color="text.secondary">
+                                  {utente.email}
+                                </Typography>
                               </Box>
                             </Box>
                           </TableCell>
-                          <TableCell>{utente.email}</TableCell>
+                          {/* <TableCell>{utente.email}</TableCell> */}
                           <TableCell align="center">
                             {utente.is_admin ? (
                               <Chip 

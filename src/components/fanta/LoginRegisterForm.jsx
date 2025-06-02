@@ -11,11 +11,12 @@ import {
   CircularProgress,
   Tabs,
   Tab,
-  Grid, 
-  Link
+  Grid
 } from '@mui/material';
+import { Link as MuiLink } from '@mui/material';
 import { supabase } from '../../supabaseClient';
 import { debounce } from 'lodash'; // Assicurati di installare lodash: npm install lodash
+import { Link as RouterLink } from 'react-router-dom';
 
 const LoginRegisterForm = ({ onSuccess }) => {
   const [activeTab, setActiveTab] = useState(0);
@@ -310,18 +311,19 @@ const handleRegister = async (e) => {
                   </Button>
                 </Typography>
               </Box>
-               <Typography
-                  variant="body2"
-                  gutterBottom
-                  align="center"
-                  color="text.secondary"
-                  sx={{ whiteSpace: 'pre-line' }}
-                >
-                  {`Per problemi di accesso contatta:\n`}
-                  <Link href="mailto:svaldisvaldisvaldi@gmail.com">
-                    QUESTO INDIRIZZO
-                  </Link>
+              <Box textAlign="center" sx={{ mt: 2 }}>
+                <Typography variant="body2">
+                  Password dimenticata?{' '}
+                  <MuiLink 
+                    component={RouterLink} 
+                    to="/reset-password"
+                    underline="hover"
+                    sx={{ cursor: 'pointer' }}
+                  >
+                    Reimposta password
+                  </MuiLink>
                 </Typography>
+              </Box>
             </Box>
           )}
         </Box>
@@ -438,18 +440,19 @@ const handleRegister = async (e) => {
                   </Button>
                 </Typography>
               </Box>
-               <Typography
-                  variant="body2"
-                  gutterBottom
-                  align="center"
-                  color="text.secondary"
-                  sx={{ whiteSpace: 'pre-line' }}
-                >
-                  {`Per problemi di accesso contatta:\n`}
-                  <Link href="mailto:svaldisvaldisvaldi@gmail.com">
-                    QUESTO INDIRIZZO
-                  </Link>
+               <Box textAlign="center" sx={{ mt: 2 }}>
+                <Typography variant="body2">
+                  Password dimenticata?{' '}
+                  <MuiLink 
+                    component={RouterLink} 
+                    to="/reset-password"
+                    underline="hover"
+                    sx={{ cursor: 'pointer' }}
+                  >
+                    Reimposta password
+                  </MuiLink>
                 </Typography>
+              </Box>
             </Box>
           )}
         </Box>
